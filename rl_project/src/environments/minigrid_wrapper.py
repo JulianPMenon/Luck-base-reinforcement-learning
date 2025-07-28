@@ -15,13 +15,10 @@ class MiniGridWrapper(gym.Wrapper):
             seed (int): The random seed for reproducibility.
         """
         self.env = gym.make(env_name, render_mode="rgb_array")
-        
         self.env = RGBImgObsWrapper(self.env)
         self.env = ImgObsWrapper(self.env)
-        
         self.observation_space = self.env.observation_space
         self.action_space = self.env.action_space
-        
         self.env.reset(seed=seed)
     
     def reset(self) -> torch.Tensor:

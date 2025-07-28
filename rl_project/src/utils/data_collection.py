@@ -9,6 +9,7 @@ class DataCollector:
     def __init__(self, env, max_episodes=1000):
         self.env = env
         self.max_episodes = max_episodes
+
         
     def collect_data(self) -> List[torch.Tensor]:
         """
@@ -26,13 +27,16 @@ class DataCollector:
             while not done:
                 action = self.env.action_space.sample()
                 obs, reward, terminated, truncated, info = self.env.step(action)
-                data.append(torch.tensor(obs, dtype=torch.float32))
+                
+                data.append(obs.detach().clone())
+                #data.append(torch.tensor(obs, dtype=torch.float32))
+                
                 done = terminated or truncated
                 if len(data) >= self.max_episodes:
                     break
         return data
     
-    def create_contrastive_pairs(self, data: List[torch.Tensor], aug: function = None, mode: str = "NOISE") -> Tuple[torch.Tensor, torch.Tensor]:
+    def create_contrastive_pairs(self, data: List[torch.Tensor], aug = None, mode: str = "NOISE") -> Tuple[torch.Tensor, torch.Tensor]:
         """
         Creates contrastive pairs from the collected data.
         
@@ -45,10 +49,9 @@ class DataCollector:
         Returns:
             List[Tuple[torch.Tensor, torch.Tensor]]: A list of tuples containing contrastive pairs.
         """
-        
-                
-        if aug == None:
-            aug = self.default_augmentation(mode = mode)
+        if aug is None:
+            aug = lambda obs: self.default_augmentation(obs, mode=mode)
+
             
         queries = []
         keys = []
@@ -76,15 +79,17 @@ class DataCollector:
         Returns:
             torch.Tensor: The augmented observation tensor.
         """
-        if mode != "NOISE":
+        if mode == "NOISE":
             noise = torch.randn_like(obs) * 0.1
             augmented = obs + noise
             
             augmented = torch.clamp(augmented, 0, 1)
-        if mode == "ROTATE":
+            return augmented
+        elif mode == "ROTATE":
             angle = random.choice([0, 90, 180, 270])
             augmented = TF.rotate(obs, angle)
+            return augmented
         else:
             raise ValueError(f"Unsupported augmentation mode: {mode}")
         
-        return augmented
+        

@@ -45,7 +45,7 @@ def main():
         
     }
     seeds = []
-    with open('src/utils/seeds.txt', 'r') as f:
+    with open('src/utils/seeds_pretraining.txt', 'r') as f:
         seeds = [int(line.strip()) for line in f]
 
     

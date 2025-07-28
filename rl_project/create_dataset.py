@@ -12,12 +12,31 @@ def set_global_seed(seed: int):
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
+    
+def build_dataset_per_seed(environments, seed: int):
+    set_global_seed(seed)
+    for difficulty, env_name in environments.items():
+        print(f"Collecting data for {difficulty} environment: {env_name}")
+        env = MiniGridWrapper(env_name, seed=seed)
+        data_collector = DataCollector(env, max_episodes=100)
+
+        obs = data_collector.collect_data()
+        queries, keys = data_collector.create_contrastive_pairs(obs, mode="NOISE")
+        
+        save_dir = f"data/{seed}"
+        os.makedirs(save_dir, exist_ok=True)
+
+        
+        torch.save({
+            'observations': obs,
+            'queries': queries,
+            'keys': keys
+        }, f'data/{seed}/{difficulty}_dataset.pth')
+        
+        print(f"Saved {len(obs)} observations for {difficulty} task with seed {seed}.")
 
 def main():
 
-    SEED = 42
-    set_global_seed(SEED)
-    
     environments = {
         #late choose what grids to actualy use
         'easy': 'MiniGrid-Empty-8x8-v0',
@@ -25,22 +44,15 @@ def main():
         'hard': 'MiniGrid-MultiRoom-N6-v0'
         
     }
+    seeds = []
+    with open('src/utils/seeds.txt', 'r') as f:
+        seeds = [int(line.strip()) for line in f]
 
-    for difficulty, env_name in environments.items():
-        print(f"Collecting data for {difficulty} environment: {env_name}")
-        env = MiniGridWrapper(env_name, seed=SEED)
-        data_collector = DataCollector(env, max_episodes=100)
+    
+    for seed in seeds:
+        build_dataset_per_seed(environments, seed)
 
-        obs = data_collector.collect_data()
-        queries, keys = data_collector.create_contrastive_pairs(obs, mode="NOISE")
-        
-        torch.save({
-            'observations': obs,
-            'queries': queries,
-            'keys': keys
-        }, f'data/{difficulty}_dataset.pth')
-        
-        print(f"Saved {len(obs)} observations for {difficulty} task")
+    
 
 if __name__ == "__main__":
     main()

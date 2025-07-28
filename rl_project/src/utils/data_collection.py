@@ -1,6 +1,8 @@
 import torch
 import numpy as np
 from typing import List, Tuple
+import random
+import torchvision.transforms.functional as TF
 
 class DataCollector:
     
@@ -21,11 +23,68 @@ class DataCollector:
             data.append(torch.tensor(obs, dtype=torch.float32))
             done = False
             
-            while not done or not truncated:
+            while not done:
                 action = self.env.action_space.sample()
-                obs, reward, done, truncated, info = self.env.step(action)
+                obs, reward, terminated, truncated, info = self.env.step(action)
                 data.append(torch.tensor(obs, dtype=torch.float32))
-            
+                done = terminated or truncated
                 if len(data) >= self.max_episodes:
                     break
         return data
+    
+    def create_contrastive_pairs(self, data: List[torch.Tensor], aug: function = None, mode: str = "NOISE") -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        Creates contrastive pairs from the collected data.
+        
+        Args:
+            data (List[torch.Tensor]): The collected data.
+            aug: Optional augmentation function to apply to the data.
+            mode (str): The augmentation mode, can be "NOISE" or "ROTATE". 
+                It is used in the default_augmentation method.
+        
+        Returns:
+            List[Tuple[torch.Tensor, torch.Tensor]]: A list of tuples containing contrastive pairs.
+        """
+        
+                
+        if aug == None:
+            aug = self.default_augmentation(mode = mode)
+            
+        queries = []
+        keys = []
+        
+        for obs in data:
+            
+            query = aug(obs).to(obs.device)
+            key = aug(obs).to(obs.device)
+                
+            queries.append(query)
+            keys.append(key)
+            
+        return torch.stack(queries), torch.stack(keys)
+    
+    def default_augmentation(self, obs: torch.Tensor, mode: str = "NOISE") -> torch.Tensor:
+        """
+        Default augmentation function that applies random noise to the observation.
+        
+        Args:
+            obs (torch.Tensor): The observation tensor.
+            mode (str): The augmentation mode, can be "NOISE" or "ROTATE".
+                "NOISE" applies random noise, "ROTATE" applies a random rotation.
+                "ROTATE" rotates the tensores to a random 90 degree increment angle.
+        
+        Returns:
+            torch.Tensor: The augmented observation tensor.
+        """
+        if mode != "NOISE":
+            noise = torch.randn_like(obs) * 0.1
+            augmented = obs + noise
+            
+            augmented = torch.clamp(augmented, 0, 1)
+        if mode == "ROTATE":
+            angle = random.choice([0, 90, 180, 270])
+            augmented = TF.rotate(obs, angle)
+        else:
+            raise ValueError(f"Unsupported augmentation mode: {mode}")
+        
+        return augmented

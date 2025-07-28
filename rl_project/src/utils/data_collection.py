@@ -21,7 +21,8 @@ class DataCollector:
         data = []
         for episode in range(self.max_episodes):
             obs = self.env.reset()
-            data.append(torch.tensor(obs, dtype=torch.float32))
+            #data.append(torch.tensor(obs, dtype=torch.float32))
+            data.append(obs.detach().clone())
             done = False
             
             while not done:

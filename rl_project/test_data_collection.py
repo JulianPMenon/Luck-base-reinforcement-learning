@@ -10,7 +10,7 @@ def main():
     data = collector.collect_data()
     print(f"Collected {len(data)} observations")
 
-    queries, keys = collector.create_contrastive_pairs(data, mode="ROTATE")
+    queries, keys = collector.create_contrastive_pairs(data, mode="NOISE")
     print(f"Contrastive pairs: queries={queries.shape}, keys={keys.shape}")
 
 if __name__ == "__main__":

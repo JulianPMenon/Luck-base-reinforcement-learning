@@ -1,10 +1,22 @@
 from src.utils.data_collection import DataCollector
 from src.environments.minigrid_wrapper import MiniGridWrapper
 import torch
+import numpy as np
+import random
+import os
+
+def set_global_seed(seed: int):
+    """Set seeds for Python, NumPy, PyTorch, and CUDA for full reproducibility."""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    os.environ["PYTHONHASHSEED"] = str(seed)
 
 def main():
 
     SEED = 42
+    set_global_seed(SEED)
     
     environments = {
         #late choose what grids to actualy use

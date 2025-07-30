@@ -44,3 +44,10 @@ class ContrasiveEncoder(nn.Module):
         x = self.forward_featues(x)
         z = self.projection_head(x)
         return F.normalize(z, dim=1)  # Normalize the output for InfoNCE
+    
+    def info_nce_loss(query, key, temperature: float = 0.1):
+        query = F.normalize(query, dim=1)
+        key = F.normalize(key, dim=1)
+        logits = torch.mm(query, key.t()) / temperature
+        labels = torch.arange(query.size(0), device=query.device)
+        return F.cross_entropy(logits, labels)

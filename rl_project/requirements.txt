@@ -1,5 +1,7 @@
 torch>=2.0.0
+torchvision>=0.15
 gymnasium>=0.28
 minigrid>=2.2.1
 numpy>=1.23
-torchvision>=0.15
+matplotlib>=3.5
+scikit-learn>=1.1

@@ -45,6 +45,7 @@ class ContrasiveEncoder(nn.Module):
         z = self.projection_head(x)
         return F.normalize(z, dim=1)  # Normalize the output for InfoNCE
     
+    @staticmethod
     def info_nce_loss(query, key, temperature: float = 0.1):
         query = F.normalize(query, dim=1)
         key = F.normalize(key, dim=1)

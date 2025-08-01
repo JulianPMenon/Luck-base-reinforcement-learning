@@ -4,7 +4,7 @@ import torch
 from minigrid.wrappers import RGBImgObsWrapper, ImgObsWrapper
 from typing import Tuple
 
-class MiniGridWrapper(gym.Wrapper):
+class MiniGridWrapper():
     
     
     def __init__(self, env_name: str, seed: int):

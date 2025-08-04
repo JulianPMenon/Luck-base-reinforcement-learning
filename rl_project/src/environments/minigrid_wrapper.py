@@ -5,6 +5,22 @@ from minigrid.wrappers import RGBImgObsWrapper, ImgObsWrapper, FullyObsWrapper
 from typing import Tuple
 
 class MiniGridWrapper():
+    def show_grid(self):
+        """
+        Displays the current grid using matplotlib and obs['image'].
+        Only works if the observation is a dict with an 'image' key (e.g., FullyObsWrapper).
+        """
+        import matplotlib.pyplot as plt
+        obs, _ = self.env.reset()
+        if isinstance(obs, dict) and 'image' in obs:
+            img = obs['image']
+            plt.figure(figsize=(4, 4))
+            plt.imshow(img)
+            plt.title('MiniGrid Observation (obs["image"])')
+            plt.axis('off')
+            plt.show()
+        else:
+            print("Current observation does not have an 'image' key.")
     
     
     def __init__(self, env_name: str, seed: int, cnn: bool = True):

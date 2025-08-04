@@ -2,15 +2,53 @@ import torch
 import sys
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.models.rl_agent import RLAgent
 from src.utils.metrics import MetricsTracker
 
+def plot_q_heatmap(agent, env, title="Q-value Heatmap"):
+    """
+    Plots a heatmap of the max Q-value for each position in the MiniGrid.
+    Only works for MiniGrid-Empty-5x5-v0 and similar fully observable envs.
+    """
+    grid_size = env.env.unwrapped.width  # assumes square grid
+    heatmap = np.zeros((grid_size, grid_size))
+    # Save current agent position and direction
+    orig_pos = tuple(env.env.unwrapped.agent_pos)
+    orig_dir = env.env.unwrapped.agent_dir
+    for x in range(grid_size):
+        for y in range(grid_size):
+            env.env.unwrapped.agent_pos = np.array([x, y])
+            env.env.unwrapped.agent_dir = 0
+            obs, _ = env.env.reset()
+            obs_tensor = env.preprocess_observation(obs)
+            state = obs_tensor.flatten()
+            if state.shape[0] != agent.expected_state_size:
+                print(f"State shape mismatch at ({x},{y}): got {state.shape[0]}, expected {agent.expected_state_size}")
+                continue
+            with torch.no_grad():
+                q_values = agent.q_network(state.unsqueeze(0))
+                max_q = q_values.max().item()
+            heatmap[y, x] = max_q  # y is row, x is col
+    # Restore original position and direction
+    env.env.unwrapped.agent_pos = np.array(orig_pos)
+    env.env.unwrapped.agent_dir = orig_dir
+    plt.figure(figsize=(6, 5))
+    plt.imshow(heatmap, origin='lower', cmap='viridis')
+    plt.colorbar(label='Max Q-value')
+    plt.title(title)
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.tight_layout()
+    plt.show()
+
 # Test with simple environment
 
 seed = 666666 #demo seed for testing
 env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=False)
+env.show_grid()  # Display the initial grid
 state_size = np.prod(env.observation_space.shape)
 conf = [0.2437, 0.5827, 0.8271, 0.6080, 0.1923, 0.9548]
 agent = RLAgent(
@@ -34,6 +72,8 @@ metrics = MetricsTracker()
 
 for episode in range(100):
     observation = env.reset()
+    obs, _ = env.env.reset()
+    obs_tensor = env.preprocess_observation(obs)
     print(f"Episode {episode} - Initial Observation stats: mean={observation.mean():.4f}, std={observation.std():.4f}, shape={observation.shape}")
     state = observation.flatten()  # Normalize the state
     done = False
@@ -76,6 +116,13 @@ for episode in range(100):
     
     print(f"Episode {episode} ended. Total reward: {total_reward}, Steps: {steps}, Done: {done}")
 
+
 final_weights_norm = get_weights_norm(agent)
 print(f"Final Q-network weights norm: {final_weights_norm:.6f}")
 print("RL Agent test completed successfully!")
+
+# Plot Q-value heatmap after training
+try:
+    plot_q_heatmap(agent, env, title="Q-value Heatmap after Training")
+except Exception as e:
+    print(f"Could not plot Q-value heatmap: {e}")

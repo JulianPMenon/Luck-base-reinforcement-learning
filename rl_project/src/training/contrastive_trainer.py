@@ -1,12 +1,13 @@
 import torch
 import torch.optim as optim
 from typing import List, Tuple
+from ..models.contrastive_model import ContrastiveLearningAgent
 from ..models.encoder import ContrasiveEncoder
 
 class ContrastiveTrainer:
     
-    def __init__(self, encoder: ContrasiveEncoder, learning_rate: float = 1e-3):
-        self.model = encoder
+    def __init__(self, model: ContrastiveLearningAgent, learning_rate: float = 1e-3):
+        self.model = model
         self.optimizer = optim.Adam(self.model.parameters(), lr=learning_rate)
         
     def train(self, queries: torch.Tensor, keys: torch.Tensor, epochs: int = 100, batch_size: int = 32) -> List[float]:
@@ -44,7 +45,7 @@ class ContrastiveTrainer:
                     print(f"First batch - Query features shape: {query_features.shape}, Key features shape: {key_features.shape}")
                 
                 # forward
-                loss = self.model.info_nce_loss(query_features, key_features)
+                loss = self.model.compute_infonce_loss(query_features, key_features)
                 
                 # backward
                 self.optimizer.zero_grad()

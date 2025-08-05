@@ -1,6 +1,8 @@
 import torch
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.models.contrastive_model import ContrastiveLearningAgent
-from src.training.contrastive_trainer import ContrastiveTrainer
+from contrastive_trainer import ContrastiveTrainer
 import matplotlib.pyplot as plt
 
 difficulties = ['easy', 'moderate', 'hard']

@@ -1,9 +1,5 @@
 import torch
-import sys, os
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-from .src.models.encoder import ContrasiveEncoder
+from src.models.contrastive_model import ContrastiveLearningAgent
 
 def build_memory_bank(model, observations, sample_rate=10):
     """Build memory bank for entropy estimation"""
@@ -27,8 +23,8 @@ for difficulty in difficulties:
     print(f"Building memory bank for {difficulty} task...")
     
     # Load model and data
-    model = ContrasiveEncoder(input_channels=3, latent_dim=128)
-    model.load_state_dict(torch.load(f'./models/{difficulty}_contrastive_model.pth'))
+    model = ContrastiveLearningAgent(input_channels=3, latent_dim=128)
+    model.load_state_dict(torch.load(f'models/{difficulty}_contrastive_model.pth'))
     
     data = torch.load(f'data/{difficulty}_dataset.pth')
     observations = data['observations']

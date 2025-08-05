@@ -1,0 +1,11 @@
+# Configuration for one hard minigrid reinforcment learning experiment
+# This file is used to set up the environment, model, and training parameters.
+name: "hard_task_experiment"
+env_name: "MiniGrid-MultiRoom-N6-v0"
+data_collection_episodes: 500
+contrastive_epochs: 200
+rl_episodes: 5000
+max_steps_per_episode: 500
+latent_dim: 128
+batch_size: 32
+learning_rate: 0.0005

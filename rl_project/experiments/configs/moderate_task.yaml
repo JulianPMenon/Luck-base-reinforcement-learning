@@ -1,0 +1,11 @@
+# Configuration for one moderate minigrid reinforcment learning experiment
+# This file is used to set up the environment, model, and training parameters.
+name: "moderate_task"
+env_name: "MiniGrid-DoorKey-8x8-v0"
+data_collection_episodes: 300
+contrastive_epochs: 150
+rl_episodes: 3000
+max_steps_per_episode: 300
+latent_dim: 128
+batch_size: 32
+learning_rate: 0.001

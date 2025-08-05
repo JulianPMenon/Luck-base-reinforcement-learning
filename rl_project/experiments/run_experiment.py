@@ -12,8 +12,9 @@ from src.utils.metrics import MetricsTracker
 from src.training.contrastive_trainer import ContrastiveTrainer
 
 def load_config(config_path):
-    # Load configuration from a YAML file
-    print("Hello WOrld")
+    """Load configuration from a YAML file"""
+    with open(config_path, 'r') as f:
+        return yaml.safe_load(f)
     
 def run_experiment(config: dict):
     # 1. Initialize environment

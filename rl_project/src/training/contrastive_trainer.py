@@ -52,6 +52,9 @@ class ContrastiveTrainer:
                 loss.backward()
                 self.optimizer.step()
                 
+                # Update key encoder with EMA
+                self.model._update_key_encoder()
+                
                 epoch_losses.append(loss.item())
                 batch_count += 1
             

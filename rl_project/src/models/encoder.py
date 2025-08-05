@@ -37,8 +37,11 @@ class ContrasiveEncoder(nn.Module):
         )
         
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+        if x.ndim == 4 and x.shape[1] != 3 and x.shape[-1] == 3:
+            # Convert from (B, H, W, C) to (B, C, H, W)
+            x = x.permute(0, 3, 1, 2)
         features = self.conv_layers(x)
-        return features.view(features.size(0), -1) # Flatten the features
+        return features.reshape(features.size(0), -1) # Flatten the features
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.forward_features(x)

@@ -6,7 +6,7 @@ import torch
 import yaml
 from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.models.contrastive_model import ContrastiveLearningAgent
-from src.models.rl_agent import RLAgent
+from src.models.rl_agent2 import RLAgent
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
 from src.training.contrastive_trainer import ContrastiveTrainer
@@ -20,7 +20,7 @@ def run_experiment(config: dict):
     print(f"Running experiment: {config['name']}")
     
     # 1. Initialize environment
-    env = MiniGridWrapper(config['env_name'])
+    env = MiniGridWrapper(config['env_name'], seed= 42)
     
     # 2. Collect data for contrastive learning
     print("                                           |   mmm  \n"
@@ -30,19 +30,117 @@ def run_experiment(config: dict):
           )
     
     data_collector = DataCollector(env, max_episodes=config['data_collection_episodes'])
-    observations = data_collector.collect_random_data()
-    queries, keys = data_collector.create_contrastive_pairs(observations, mode="Noise")
-    queries, keys += data_collector.create_contrastive_pairs(observations, mode="Rotate")
+    observations = data_collector.collect_data()
+    queries, keys = data_collector.create_contrastive_pairs(observations, mode="NOISE")
+
     
     # 3. Initialize contrastive model
-    
+    contrastive_model = ContrastiveLearningAgent(
+        input_channels=3,  # Assuming RGB images
+        latent_dim=config['latent_dim']
+    )
     
     # 4. Train contrastive model
+    print("                                           |   mmm  \n"
+          "Training contrastive model...              |  (O.O) \n"
+          "                                           | <( : )>\n"
+          "                                           |   / \  \n"
+          )
+    contrastive_trainer = ContrastiveTrainer(contrastive_model)
+    contrastive_losses = contrastive_trainer.train(
+        queries, keys, 
+        epochs=config['contrastive_epochs']
+    )
     
     # 5. Initialize RL agent
+    state_dim = config['latent_dim']  # Use latent representation
+    action_dim = env.action_space.n
+    agent = RLAgent(state_dim, action_dim)
     
     # 6. Build memory bank for entropy estimation
+    print("                                           |  Bank  |\n"
+          "Building memory bank...                    |        |\n"
+          "                                           |   __   |\n"
+          "                                           |   ||   |\n"
+          )
+    memory_bank = []
+    with torch.no_grad():
+        for i in range(0, len(observations), 100):  # Sample every 100th observation
+            obs_batch = torch.stack(observations[i:i+10])
+            encodings = contrastive_model.query_encoder(obs_batch)
+            memory_bank.extend(encodings)
+    memory_bank = torch.stack(memory_bank)
     
     # 7. Training
+    print("Training RL agent with intrinsic rewards...")
+    metrics = MetricsTracker()
     
+    for episode in range(config['rl_episodes']):
+        obs = env.reset()
+        total_reward = 0
+        steps = 0
+        visited_states = []
+        
+        done = False
+        while not done and steps < config['max_steps_per_episode']:
+            with torch.no_grad():
+                state_encoding = contrastive_model.query_encoder(obs.unsqueeze(0))
+                visited_states.append(state_encoding.squeeze())
+
+            action = agent.act(state_encoding.squeeze())
+            
+            next_obs, reward, terminated, truncated, _ = env.step(action)
+            done = terminated or truncated
+            
+            with torch.no_grad():
+                intrinsic_reward = contrastive_model.compute_state_entropy(
+                    obs.unsqueeze(0), memory_bank
+                ).item()
+            
+            with torch.no_grad():
+                next_state_encoding = contrastive_model.query_encoder(next_obs.unsqueeze(0))
+                
+            agent.remember(
+                state_encoding.squeeze(), action, reward, 
+                next_state_encoding.squeeze(), done, intrinsic_reward
+            )
+            
+            if len(agent.memory) > 100:
+                loss = agent.train()
+                # Ensure only float loss values are appended
+                try:
+                    float_loss = float(loss)
+                    metrics.update_loss(loss_type='rl', loss=float_loss)
+                except (TypeError, ValueError):
+                    print(f"[Warning] RL loss is not a float: {loss} (type: {type(loss)}) - skipping metrics update.")
+                    
+            total_reward += reward
+            steps += 1
+            obs = next_obs
+            
+            metrics.update_intrinsic_reward(intrinsic_reward=intrinsic_reward)
+        
+        if episode % 100 == 0:
+            agent.update_target_network()
+            
+        metrics.update_episode(total_reward, steps, visited_states)
+            
+        if episode % 50 == 0:
+            avg_reward = metrics.get_average_return()
+            exploration_efficiency = metrics.get_exploration_efficiency()
+            print(f"Episode {episode}: Total Reward: {total_reward}, "
+                  f"Avg Reward: {avg_reward:.2f}, "
+                  f"Exploration Efficiency: {exploration_efficiency:.2f}")
+            
+            
     # 8. Evaluation
+    result_dir = f"results/{config['name']}"
+    os.makedirs(result_dir, exist_ok=True)
+    metrics.plot_metrics(save_path=f"{result_dir}/metrics.png")
+    torch.save(contrastive_model.state_dict(), f"{result_dir}/contrastive_model.pth")
+    torch.save(agent.state_dict(), f"{result_dir}/rl_agent.pth")
+    print(f"Experiment {config['name']} completed. Results saved to {result_dir}")
+    return metrics
+
+if __name__ == "__main__":
+    run_experiment(load_config('rl_project/experiments/configs/easy_task.yaml'))

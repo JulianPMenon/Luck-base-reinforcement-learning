@@ -36,12 +36,12 @@ class ContrasiveEncoder(nn.Module):
             nn.Linear(hidden_dim, latent_dim)
         )
         
-    def forward_featues(self, x: torch.Tensor) -> torch.Tensor:
+    def forward_features(self, x: torch.Tensor) -> torch.Tensor:
         features = self.conv_layers(x)
         return features.view(features.size(0), -1) # Flatten the features
-        
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.forward_featues(x)
+        x = self.forward_features(x)
         z = self.projection_head(x)
         return F.normalize(z, dim=1)  # Normalize the output for InfoNCE
     

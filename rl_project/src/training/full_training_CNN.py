@@ -2,7 +2,7 @@ import torch
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.models.contrastive_model import ContrastiveLearningAgent
-from contrastive_trainer import ContrastiveTrainer
+from .contrastive_trainer import ContrastiveTrainer
 import matplotlib.pyplot as plt
 
 difficulties = ['easy', 'moderate', 'hard']
@@ -16,7 +16,7 @@ for difficulty in difficulties:
     
     # Initialize model
     model = ContrastiveLearningAgent(input_channels=3, latent_dim=128)
-    trainer = ContrastiveTrainer(model, lr=0.001)
+    trainer = ContrastiveTrainer(model, learning_rate=0.001)
     
     # Train model
     losses = trainer.train(queries, keys, epochs=100, batch_size=32)

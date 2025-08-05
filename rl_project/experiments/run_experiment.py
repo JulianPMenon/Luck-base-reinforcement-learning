@@ -80,7 +80,7 @@ def run_experiment(config: dict):
         total_reward = 0
         steps = 0
         visited_states = []
-        
+        episode_transitions = []  # For HER
         done = False
         while not done and steps < config['max_steps_per_episode']:
             with torch.no_grad():
@@ -88,23 +88,28 @@ def run_experiment(config: dict):
                 visited_states.append(state_encoding.squeeze())
 
             action = agent.act(state_encoding.squeeze())
-            
+
             next_obs, reward, terminated, truncated, _ = env.step(action)
             done = terminated or truncated
-            
+
             with torch.no_grad():
                 intrinsic_reward = contrastive_model.compute_state_entropy(
                     obs.unsqueeze(0), memory_bank
                 ).item()
-            
+
             with torch.no_grad():
                 next_state_encoding = contrastive_model.query_encoder(next_obs.unsqueeze(0))
-                
+
+            # Store transition for HER: (state, action, reward, next_state, done, achieved_goal)
+            achieved_goal = next_state_encoding.squeeze().detach().clone()
+            episode_transitions.append((state_encoding.squeeze().detach().clone(), action, reward, next_state_encoding.squeeze().detach().clone(), done, achieved_goal))
+
+            # Standard experience replay
             agent.remember(
                 state_encoding.squeeze(), action, reward, 
                 next_state_encoding.squeeze(), done, intrinsic_reward
             )
-            
+
             if len(agent.memory) > 100:
                 loss = agent.train()
                 # Ensure only float loss values are appended
@@ -113,18 +118,30 @@ def run_experiment(config: dict):
                     metrics.update_loss(loss_type='rl', loss=float_loss)
                 except (TypeError, ValueError):
                     print(f"[Warning] RL loss is not a float: {loss} (type: {type(loss)}) - skipping metrics update.")
-                    
+
             total_reward += reward
             steps += 1
             obs = next_obs
-            
+
             metrics.update_intrinsic_reward(intrinsic_reward=intrinsic_reward)
-        
+
+        # --- Hindsight Experience Replay (HER) ---
+        K = 4  # Number of HER samples per transition
+        for t, (state, action, reward, next_state, done, _) in enumerate(episode_transitions):
+            future_idxs = torch.randint(t, len(episode_transitions), (K,))
+            for idx in future_idxs:
+                new_goal = episode_transitions[idx][3]  # Use future next_state_encoding as new goal
+                # HER reward: 1 if next_state matches new_goal (within tolerance), else 0
+                # Here, use L2 distance threshold
+                her_reward = 1.0 if torch.norm(next_state - new_goal) < 1e-3 else 0.0
+                # Store HER transition (no intrinsic reward for HER transitions)
+                agent.remember(state, action, her_reward, next_state, done, intrinsic_reward=0)
+
         if episode % 100 == 0:
             agent.update_target_network()
-            
+
         metrics.update_episode(total_reward, steps, visited_states)
-            
+
         if episode % 50 == 0:
             avg_reward = metrics.get_average_return()
             exploration_efficiency = metrics.get_exploration_efficiency()

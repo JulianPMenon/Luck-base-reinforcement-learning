@@ -6,10 +6,10 @@ from collections import deque
 import random
 from typing import Dict, Tuple, List
 
-class RLAgent:
+class RLAgent(nn.Module):
     
-    def __init__(self, state_size: int, action_size: int, hidden_size: int = 256, epsilon: float = 1.0, epsilon_decay: float = 0.995, 
-                 epsilon_min: float = 0.01, gamma: float = 0.99, learning_rate: float = 1e-3, intrinsic_weight: float = 0.1, batch_size: int = 64, memory_size: int = 10000):
+    def __init__(self, state_size: int, action_size: int, hidden_size: int = 128, epsilon: float = 1.0, epsilon_decay: float = 0.995, 
+                 epsilon_min: float = 0.01, gamma: float = 0.99, learning_rate: float = 1e-3, intrinsic_weight: float = 0.1, batch_size: int = 64, memory_size: int = 1000):
         super().__init__()
         self.action_size = action_size
         self.epsilon = epsilon
@@ -17,6 +17,7 @@ class RLAgent:
         self.epsilon_min = epsilon_min
         self.gamma = gamma
         self.batch_size = batch_size
+        self.max_memory = memory_size
         self.memory = deque(maxlen=memory_size)
         self.learning_rate = learning_rate
         self.intrinsic_weight = intrinsic_weight
@@ -30,25 +31,48 @@ class RLAgent:
         else:
             state_size = int(state_size)
         self.expected_state_size = state_size
-        print(f"Creating networks with state_size: {state_size}")
+        #print(f"Creating networks with state_size: {state_size}")
                                  
         self.q_network = nn.Sequential(
-            nn.Linear(state_size, hidden_size),
+            nn.Conv2d(state_size, hidden_size, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, hidden_size),
+            nn.Conv2d(hidden_size, hidden_size, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, action_size)
         )
         
+        self.q_network_head = nn.Sequential(
+            nn.Linear(hidden_size*state_size * 3,action_size),
+            nn.Softmax()
+        )
+
         self.target_network = nn.Sequential(
-            nn.Linear(state_size, hidden_size),
+            nn.Conv2d(state_size, hidden_size, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, hidden_size),
+            nn.Conv2d(hidden_size, hidden_size, kernel_size=3, stride=1, padding=1),
+            nn.BatchNorm2d(hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, action_size)
+        )
+
+        self.target_network_head = nn.Sequential(
+            nn.Linear(hidden_size*state_size * 3,action_size),
+            nn.Softmax()
         )
         self.optimizer = optim.Adam(self.q_network.parameters(), lr=self.learning_rate)
         self.update_target_network()
+    
+    def q_forward(self, x: torch.Tensor):
+        features = self.q_network(x)
+        z = self.q_network_head(features.view(features.size(0), -1)) # Flatten the features
+        return z
+    
+    def target_forward(self,x: torch.Tensor):
+        features = self.target_network(x)
+        z = self.target_network_head(features.view(features.size(0), -1)) # Flatten the features
+        return z
+
         
     def update_target_network(self):
         """Copy weights from the Q-network to the target network."""
@@ -62,13 +86,7 @@ class RLAgent:
         if not torch.is_tensor(state):
             state = torch.tensor(state, dtype=torch.float32)
         with torch.no_grad():
-            if state.dim() > 1:
-                state = state.flatten()
-            if state.dim() == 1:
-                state = state.unsqueeze(0)
-            if state.shape[1] != self.expected_state_size:
-                raise ValueError(f"State size mismatch! Expected {self.expected_state_size}, got {state.shape[1]}")
-            q_values = self.q_network(state)
+            q_values = self.q_forward(state.unsqueeze(0))
             return torch.argmax(q_values).item()
         
     def remember(self, state: np.ndarray, action: int,  reward: float, next_state: np.ndarray, done: bool, intrinsic_reward: float = 0.0):
@@ -92,20 +110,25 @@ class RLAgent:
             return
         batch = random.sample(self.memory, self.batch_size)
         # Ensure all states are torch tensors
-        states = torch.stack([e[0].flatten() if torch.is_tensor(e[0]) else torch.tensor(e[0], dtype=torch.float32).flatten() for e in batch])
+        states = torch.stack([e[0] if torch.is_tensor(e[0]) else torch.tensor(e[0], dtype=torch.float32) for e in batch])
         actions = torch.tensor([e[1] for e in batch])
         rewards = torch.tensor([e[2] for e in batch], dtype=torch.float32)
-        next_states = torch.stack([e[3].flatten() if torch.is_tensor(e[3]) else torch.tensor(e[3], dtype=torch.float32).flatten() for e in batch])
+        next_states = torch.stack([e[3] if torch.is_tensor(e[3]) else torch.tensor(e[3], dtype=torch.float32) for e in batch])
         dones = torch.tensor([e[4] for e in batch], dtype=torch.float32)
         # Validate state sizes
         if states.shape[1] != self.expected_state_size:
             raise ValueError(f"Training state size mismatch! Expected {self.expected_state_size}, got {states.shape[1]}")
         if next_states.shape[1] != self.expected_state_size:
             raise ValueError(f"Training next_state size mismatch! Expected {self.expected_state_size}, got {next_states.shape[1]}")
-        current_q_values = self.q_network(states).gather(1, actions.unsqueeze(1))
-        next_q_values = self.target_network(next_states).max(1)[0].detach()
-        target_q_values = rewards + self.gamma * next_q_values * (1 - dones)
-        loss = nn.MSELoss()(current_q_values.squeeze(1), target_q_values)
+        
+        current_q_values = self.q_forward(states).gather(1, actions.unsqueeze(1))
+        next_q_values = self.target_forward(next_states).max(1)[0].detach()
+        target_q_values = rewards + self.gamma * next_q_values# * (1 - dones)
+        criterion = nn.SmoothL1Loss(beta=0.3)
+        loss = criterion(current_q_values.squeeze(1), target_q_values)
+        # for n in range(len(rewards)):
+        #     if rewards[n] != 0:
+        #         print(f"reward[n]: {rewards[n]} | current_q_value[n]: {current_q_values[n]} | target_q_values[n]: {target_q_values[n]:.6} | loss {loss:.6}\n")
         # Optimize the Q-network (backwards pass)
         self.optimizer.zero_grad()
         loss.backward()

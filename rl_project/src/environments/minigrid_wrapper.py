@@ -35,11 +35,11 @@ class MiniGridWrapper():
         if cnn:
         
             self.env = RGBImgObsWrapper(self.env)
-            self.env = ImgObsWrapper(self.env)
+            #self.env = ImgObsWrapper(self.env)
         else:
             
             self.env = FullyObsWrapper(self.env)
-        self.observation_space = self.env.observation_space
+        self.observation_space = self.env.observation_space['image']
         self.action_space = self.env.action_space
         self.env.reset(seed=seed)
         sample_obs, _ = self.env.reset()
@@ -65,13 +65,13 @@ class MiniGridWrapper():
         # Use the processed observation shape for state size calculation
         self._actual_obs_shape = processed_obs.shape
             
-        print(f"Observation type: {type(sample_obs)}")
-        print(f"Processed observation shape: {self._actual_obs_shape}")
-        print(f"Final state size will be: {self.get_state_size()}")
-        if isinstance(sample_obs, dict):
-            print(f"Observation keys: {sample_obs.keys()}")
-            for key, value in sample_obs.items():
-                print(f"  {key}: {type(value)} {getattr(value, 'shape', 'no shape')}")
+        #print(f"Observation type: {type(sample_obs)}")
+        #print(f"Processed observation shape: {self._actual_obs_shape}")
+        #print(f"Final state size will be: {self.get_state_size()}")
+        #if isinstance(sample_obs, dict):
+            #print(f"Observation keys: {sample_obs.keys()}")
+            #for key, value in sample_obs.items():
+                #print(f"  {key}: {type(value)} {getattr(value, 'shape', 'no shape')}")
         ### this part above is made with claude sonnet 4 ###
     
     def get_state_size(self) -> int:
@@ -152,7 +152,7 @@ class MiniGridWrapper():
             # For fully observable: ensure it's flattened
             obs_tensor = obs_tensor.flatten()
             
-        return obs_tensor
+        return obs_tensor.permute(1,2,0)
     
     def render(self):
         """

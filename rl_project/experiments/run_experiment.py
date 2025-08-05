@@ -17,12 +17,25 @@ def load_config(config_path):
         return yaml.safe_load(f)
     
 def run_experiment(config: dict):
+    print(f"Running experiment: {config['name']}")
+    
     # 1. Initialize environment
     env = MiniGridWrapper(config['env_name'])
     
     # 2. Collect data for contrastive learning
+    print("                                           |   mmm  \n"
+          "Collecting data for contrastive learning...|  (@_@) \n"
+          "                                           | <( : )>\n"
+          "                                           |   / \  \n"
+          )
+    
+    data_collector = DataCollector(env, max_episodes=config['data_collection_episodes'])
+    observations = data_collector.collect_random_data()
+    queries, keys = data_collector.create_contrastive_pairs(observations, mode="Noise")
+    queries, keys += data_collector.create_contrastive_pairs(observations, mode="Rotate")
     
     # 3. Initialize contrastive model
+    
     
     # 4. Train contrastive model
     

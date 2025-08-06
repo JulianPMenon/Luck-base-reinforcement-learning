@@ -10,6 +10,7 @@ from src.models.rl_agent2 import RLAgent
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
 from src.training.contrastive_trainer import ContrastiveTrainer
+from tests.random_search import plot_heatMap
 
 def load_config(config_path):
     """Load configuration from a YAML file"""
@@ -157,6 +158,7 @@ def run_experiment(config: dict):
     torch.save(contrastive_model.state_dict(), f"{result_dir}/contrastive_model.pth")
     torch.save(agent.state_dict(), f"{result_dir}/rl_agent.pth")
     print(f"Experiment {config['name']} completed. Results saved to {result_dir}")
+    plot_heatMap(agent = {"Agent": agent}, env = env)
     return metrics
 
 if __name__ == "__main__":

@@ -64,7 +64,7 @@ class RLAgent(nn.Module):
         self.update_target_network()
     
     def q_forward(self, x: torch.Tensor):
-        features = self.q_network(x)
+        features = self.q_network(x.unsqueeze(0))
         z = self.q_network_head(features.view(features.size(0), -1)) # Flatten the features
         return z
     
@@ -120,8 +120,8 @@ class RLAgent(nn.Module):
             raise ValueError(f"Training state size mismatch! Expected {self.expected_state_size}, got {states.shape[1]}")
         if next_states.shape[1] != self.expected_state_size:
             raise ValueError(f"Training next_state size mismatch! Expected {self.expected_state_size}, got {next_states.shape[1]}")
-        
-        current_q_values = self.q_forward(states).gather(1, actions.unsqueeze(1))
+        print(states.shape)
+        current_q_values = self.q_forward(states.unsqueeze(0)).gather(1, actions.unsqueeze(1))
         next_q_values = self.target_forward(next_states).max(1)[0].detach()
         target_q_values = rewards + self.gamma * next_q_values# * (1 - dones)
         criterion = nn.SmoothL1Loss(beta=0.3)

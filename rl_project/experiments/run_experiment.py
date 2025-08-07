@@ -7,7 +7,6 @@ import yaml
 from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
-#from src.training.contrastive_trainer import ContrastiveTrainer
 from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
 from tests.random_search import plot_heatMap
 import torch.optim as optim

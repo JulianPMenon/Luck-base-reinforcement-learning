@@ -8,7 +8,7 @@ from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
 from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
-from tests.random_search import plot_heatMap
+from tests import random_search
 import torch.optim as optim
 
 def load_config(config_path):
@@ -77,7 +77,7 @@ def run_experiment(config: dict):
             memory_bank.extend(encodings)
     memory_bank = torch.stack(memory_bank)
     
-    plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
+    random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
     # 7. Training
     print("Training RL agent with intrinsic rewards...")
     metrics = MetricsTracker()
@@ -162,7 +162,7 @@ def run_experiment(config: dict):
                   f"Avg Reward: {avg_reward:.2f}, "
                   f"Exploration Efficiency: {exploration_efficiency:.2f},"
                   f"Last loss = {lastloss}")
-            plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
+            random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
             
             
     # 8. Evaluation
@@ -172,7 +172,7 @@ def run_experiment(config: dict):
     torch.save(contrastiv_rl_agent.contrastive_model.state_dict(), f"{result_dir}/contrastive_model.pth")
     torch.save(contrastiv_rl_agent.rl_agent.state_dict(), f"{result_dir}/rl_agent.pth")
     print(f"Experiment {config['name']} completed. Results saved to {result_dir}")
-    plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'])
+    random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'])
     return metrics
 
 if __name__ == "__main__":

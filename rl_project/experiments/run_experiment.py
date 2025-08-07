@@ -8,7 +8,7 @@ from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
 from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
-from tests import random_search
+from unit_tests import random_search
 import torch.optim as optim
 
 def load_config(config_path):

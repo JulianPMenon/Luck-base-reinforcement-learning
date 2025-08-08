@@ -31,7 +31,7 @@ def run_experiment(config: dict, seed:int):
           "                                           |   / \  \n"
           )
     
-    data_collector = DataCollector(env, max_episodes=config['data_collection_episodes'])
+    data_collector = DataCollector(env, max_episodes=config['data_collection_episodes']).to(device)
     observations = data_collector.collect_data()
     queries, keys = data_collector.create_contrastive_pairs(observations, mode="NOISE")
 

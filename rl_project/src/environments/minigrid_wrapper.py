@@ -151,8 +151,9 @@ class MiniGridWrapper():
         else:
             # For fully observable: ensure it's flattened
             obs_tensor = obs_tensor.flatten()
-            
-        return obs_tensor.permute(1,2,0)
+    
+        device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
+        return obs_tensor.permute(1,2,0).to(device)
     
     def render(self):
         """

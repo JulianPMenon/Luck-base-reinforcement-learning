@@ -74,7 +74,7 @@ def run_experiment(config: dict, seed:int):
     memory_bank = []
     with torch.no_grad():
         for i in range(0, len(observations), 100):  # Sample every 100th observation
-            obs_batch = torch.stack(observations[i:i+10])
+            obs_batch = torch.stack(observations[i:i+10]).to(device)
             encodings = contrastiv_rl_agent.query_encoder(obs_batch)
             memory_bank.extend(encodings)
     memory_bank = torch.stack(memory_bank)

@@ -75,12 +75,13 @@ class RLAgent(nn.Module):
         if len(self.memory) < batch_size:
             print("[RLAgent] Not enough memory to train.")
             return 0.0
+        device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
         batch = random.sample(self.memory, batch_size)
-        states = torch.stack([e[0] for e in batch])
-        actions = torch.tensor([e[1] for e in batch])
-        rewards = torch.tensor([e[2] for e in batch], dtype=torch.float32)
-        next_states = torch.stack([e[3] for e in batch])
-        dones = torch.tensor([e[4] for e in batch], dtype=torch.bool)
+        states = torch.stack([e[0] for e in batch]).to(device)
+        actions = torch.tensor([e[1] for e in batch]).to(device)
+        rewards = torch.tensor([e[2] for e in batch], dtype=torch.float32).to(device)
+        next_states = torch.stack([e[3] for e in batch]).to(device)
+        dones = torch.tensor([e[4] for e in batch], dtype=torch.bool).to(device)
         #print(f"states: {states.shape}")
             
         current_q_values = self.q_network(states/batch_size)

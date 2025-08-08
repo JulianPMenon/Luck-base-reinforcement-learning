@@ -1,0 +1,272 @@
+Epoch 30/100, Loss: 1.8235
+Epoch 40/100, Loss: 1.6911
+Epoch 50/100, Loss: 1.5467
+Epoch 60/100, Loss: 1.3979
+Epoch 70/100, Loss: 1.2536
+Epoch 80/100, Loss: 1.1409
+Epoch 90/100, Loss: 1.0695
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.11394135653972626
+Episode 50: Total Reward: 0, Avg Reward: 0.21, Exploration Efficiency: 0.00,Last loss = 0.05066429078578949
+Episode 100: Total Reward: 0, Avg Reward: 0.26, Exploration Efficiency: 0.00,Last loss = 0.07890036702156067
+Traceback (most recent call last):
+  File "c:\Users\mainb\Documents\Studium\Master_Informatik\RL\Luck-base-reinforcement-learning\rl_project\experiments\run_experiment.py", line 179, in <module>
+    run_experiment(load_config('rl_project/experiments/configs/easy_task.yaml'))
+  File "c:\Users\mainb\Documents\Studium\Master_Informatik\RL\Luck-base-reinforcement-learning\rl_project\experiments\run_experiment.py", line 104, in run_experiment
+    with torch.no_grad():
+  File "C:\Users\mainb\anaconda3\envs\RL\lib\site-packages\torch\autograd\grad_mode.py", line 76, in __init__
+    if not torch._jit_internal.is_scripting():
+  File "C:\Users\mainb\anaconda3\envs\RL\lib\site-packages\torch\_jit_internal.py", line 101, in is_scripting
+    def is_scripting() -> bool:
+KeyboardInterrupt
+PS C:\Users\mainb\Documents\Studium\Master_Informatik\RL\Luck-base-reinforcement-learning> & C:/Users/mainb/anaconda3/envs/RL/python.exe c:/Users/mainb/Documents/Studium/Master_Informatik/RL/Luck-base-reinforcement-learning/rl_project/experiments/run_experiment.py
+Running experiment: easy_task
+                                           |   mmm  
+Collecting data for contrastive learning...|  (@_@)
+                                           | <( : )>
+                                           |   / \
+
+3
+                                           |   mmm  
+Training contrastive model...              |  (O.O)
+                                           | <( : )>
+                                           |   / \
+
+Dataset size: 598
+Batch size: 32
+Batches per epoch: 18
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.9369
+Epoch 10/100, Loss: 2.0374
+Epoch 20/100, Loss: 1.9372
+Epoch 30/100, Loss: 1.8274
+Epoch 40/100, Loss: 1.6912
+Epoch 50/100, Loss: 1.6252
+Epoch 60/100, Loss: 1.5109
+Epoch 70/100, Loss: 1.3965
+Epoch 80/100, Loss: 1.3226
+Epoch 90/100, Loss: 1.2854
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = nan
+Episode 50: Total Reward: 0.8875, Avg Reward: 0.32, Exploration Efficiency: 0.00,Last loss = 0.042408287525177
+Episode 100: Total Reward: 0.7222656249999999, Avg Reward: 0.36, Exploration Efficiency: 0.00,Last loss = 0.061554647982120514
+Episode 150: Total Reward: 0.49375, Avg Reward: 0.40, Exploration Efficiency: 0.00,Last loss = 0.03324096277356148
+Episode 200: Total Reward: 0, Avg Reward: 0.42, Exploration Efficiency: 0.00,Last loss = nan
+Episode 250: Total Reward: 0, Avg Reward: 0.47, Exploration Efficiency: 0.00,Last loss = 0.08470604568719864
+Episode 300: Total Reward: 0.803125, Avg Reward: 0.53, Exploration Efficiency: 0.00,Last loss = 0.18158194422721863
+Episode 350: Total Reward: 0.715234375, Avg Reward: 0.58, Exploration Efficiency: 0.00,Last loss = 0.08172602206468582
+Episode 400: Total Reward: 0.827734375, Avg Reward: 0.63, Exploration Efficiency: 0.00,Last loss = 0.07432717084884644
+Episode 450: Total Reward: 0, Avg Reward: 0.66, Exploration Efficiency: 0.00,Last loss = nan
+Episode 500: Total Reward: 0.7398437499999999, Avg Reward: 0.70, Exploration Efficiency: 0.00,Last loss = 0.1019822284579277
+Episode 550: Total Reward: 0.75390625, Avg Reward: 0.73, Exploration Efficiency: 0.00,Last loss = 0.008772999979555607
+Episode 600: Total Reward: 0.85234375, Avg Reward: 0.70, Exploration Efficiency: 0.00,Last loss = 0.07739295810461044
+Episode 650: Total Reward: 0.803125, Avg Reward: 0.74, Exploration Efficiency: 0.00,Last loss = 0.04871947318315506
+Episode 700: Total Reward: 0.883984375, Avg Reward: 0.79, Exploration Efficiency: 0.00,Last loss = 0.07931850850582123
+Episode 750: Total Reward: 0.940234375, Avg Reward: 0.73, Exploration Efficiency: 0.00,Last loss = nan
+Episode 800: Total Reward: 0, Avg Reward: 0.63, Exploration Efficiency: 0.00,Last loss = 0.007219808176159859
+Episode 850: Total Reward: 0.883984375, Avg Reward: 0.69, Exploration Efficiency: 0.00,Last loss = 0.07447214424610138
+Episode 900: Total Reward: 0.947265625, Avg Reward: 0.77, Exploration Efficiency: 0.00,Last loss = 0.11504994332790375
+Episode 950: Total Reward: 0.834765625, Avg Reward: 0.76, Exploration Efficiency: 0.00,Last loss = 0.036258723586797714
+Episode 1000: Total Reward: 0.88046875, Avg Reward: 0.78, Exploration Efficiency: 0.00,Last loss = 0.09058097749948502
+Episode 1050: Total Reward: 0.95078125, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.12607744336128235
+Episode 1100: Total Reward: 0.69765625, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.1120043396949768
+Episode 1150: Total Reward: 0.8171875, Avg Reward: 0.84, Exploration Efficiency: 0.00,Last loss = 0.12964507937431335
+Episode 1200: Total Reward: 0.841796875, Avg Reward: 0.84, Exploration Efficiency: 0.00,Last loss = 0.18339850008487701
+Episode 1250: Total Reward: 0.834765625, Avg Reward: 0.84, Exploration Efficiency: 0.00,Last loss = 0.09865428507328033
+Episode 1300: Total Reward: 0.912109375, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.06181316450238228
+Episode 1350: Total Reward: 0.912109375, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.10514282435178757
+Episode 1400: Total Reward: 0.8734375, Avg Reward: 0.85, Exploration Efficiency: 0.00,Last loss = 0.0051154461689293385
+Episode 1450: Total Reward: 0.841796875, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.18678489327430725
+Episode 1500: Total Reward: 0.926171875, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.07698940485715866
+Episode 1550: Total Reward: 0.792578125, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.17216119170188904
+Episode 1600: Total Reward: 0.85234375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.1409454196691513
+Episode 1650: Total Reward: 0.926171875, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.16711124777793884
+Episode 1700: Total Reward: 0.905078125, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.2049638032913208
+Episode 1750: Total Reward: 0.841796875, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.1940259039402008
+Episode 1800: Total Reward: 0.940234375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.1666765809059143
+Episode 1850: Total Reward: 0.940234375, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.15729491412639618
+Episode 1900: Total Reward: 0.898046875, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.045565422624349594
+Episode 1950: Total Reward: 0.9296875, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.2309798002243042
+Episode 2000: Total Reward: 0.90859375, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.20864377915859222
+Episode 2050: Total Reward: 0.905078125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.16328054666519165
+Episode 2100: Total Reward: 0.94375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.017093734815716743
+Episode 2150: Total Reward: 0.855859375, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.09977778047323227
+Episode 2200: Total Reward: 0.954296875, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.2695114314556122
+Episode 2250: Total Reward: 0.961328125, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.09779003262519836
+Episode 2300: Total Reward: 0.9578125, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.08484850078821182
+Episode 2350: Total Reward: 0.7609375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.014750090427696705
+Episode 2400: Total Reward: 0.912109375, Avg Reward: 0.81, Exploration Efficiency: 0.00,Last loss = 0.03410114347934723
+Episode 2450: Total Reward: 0.95078125, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.15080256760120392
+Episode 2500: Total Reward: 0.9296875, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.22746026515960693
+Episode 2550: Total Reward: 0.961328125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.09423483908176422
+Episode 2600: Total Reward: 0.961328125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.16003641486167908
+Episode 2650: Total Reward: 0, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.09266285598278046
+Episode 2700: Total Reward: 0.961328125, Avg Reward: 0.84, Exploration Efficiency: 0.00,Last loss = 0.0988520160317421
+Episode 2750: Total Reward: 0.954296875, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.12275886535644531
+Episode 2800: Total Reward: 0.947265625, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.1759611964225769
+Episode 2850: Total Reward: 0.961328125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.1487681120634079
+Episode 2900: Total Reward: 0.855859375, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.20358240604400635
+Episode 2950: Total Reward: 0.743359375, Avg Reward: 0.84, Exploration Efficiency: 0.00,Last loss = 0.014514630660414696
+Episode 3000: Total Reward: 0.961328125, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.15808801352977753
+Episode 3050: Total Reward: 0.961328125, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.1963101625442505
+Episode 3100: Total Reward: 0.912109375, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.2580333948135376
+Episode 3150: Total Reward: 0.602734375, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.10373838245868683
+Episode 3200: Total Reward: 0.94375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.1715238243341446
+Episode 3250: Total Reward: 0.9578125, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.21989285945892334
+Episode 3300: Total Reward: 0.88046875, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.12151576578617096
+Episode 3350: Total Reward: 0.876953125, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.10053113847970963
+Episode 3400: Total Reward: 0.919140625, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.2587898075580597
+Episode 3450: Total Reward: 0.915625, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.07491594552993774
+Episode 3500: Total Reward: 0.926171875, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.2259308248758316
+Episode 3550: Total Reward: 0.961328125, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.29986241459846497
+Episode 3600: Total Reward: 0.926171875, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.30667752027511597
+Episode 3650: Total Reward: 0, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.009157232940196991
+Episode 3700: Total Reward: 0, Avg Reward: 0.41, Exploration Efficiency: 0.00,Last loss = 0.07144607603549957
+Episode 3750: Total Reward: 0.961328125, Avg Reward: 0.47, Exploration Efficiency: 0.00,Last loss = 0.1626991629600525
+Episode 3800: Total Reward: 0.926171875, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.0472339428961277
+Episode 3850: Total Reward: 0.947265625, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.03380782529711723
+Episode 3900: Total Reward: 0.961328125, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.05535854771733284
+Episode 3950: Total Reward: 0.9578125, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.043920308351516724
+Experiment easy_task completed. Results saved to results/easy_task
+PS C:\Users\mainb\Documents\Studium\Master_Informatik\RL\Luck-base-reinforcement-learning> & C:/Users/mainb/anaconda3/envs/RL/python.exe c:/Users/mainb/Documents/Studium/Master_Informatik/RL/Luck-base-reinforcement-learning/rl_project/experiments/run_experiment.py
+Running experiment: easy_task
+                                           |   mmm  
+Collecting data for contrastive learning...|  (@_@)
+                                           | <( : )>
+                                           |   / \
+
+3
+                                           |   mmm  
+Training contrastive model...              |  (O.O)
+                                           | <( : )>
+                                           |   / \
+
+Dataset size: 598
+Batch size: 32
+Batches per epoch: 18
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.9130
+Epoch 10/100, Loss: 2.0506
+Epoch 20/100, Loss: 1.8531
+Epoch 30/100, Loss: 1.8112
+Epoch 40/100, Loss: 1.6556
+Epoch 50/100, Loss: 1.5035
+Epoch 60/100, Loss: 1.3739
+Epoch 70/100, Loss: 1.1889
+Epoch 80/100, Loss: 1.1412
+Epoch 90/100, Loss: 1.0571
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.129007488489151
+Episode 50: Total Reward: 0, Avg Reward: 0.24, Exploration Efficiency: 0.00,Last loss = 0.01687019318342209
+Episode 100: Total Reward: 0, Avg Reward: 0.25, Exploration Efficiency: 0.00,Last loss = 0.056226737797260284
+Episode 150: Total Reward: 0, Avg Reward: 0.27, Exploration Efficiency: 0.00,Last loss = 0.032486531883478165
+Episode 200: Total Reward: 0, Avg Reward: 0.33, Exploration Efficiency: 0.00,Last loss = 0.003812749171629548
+Episode 250: Total Reward: 0.328515625, Avg Reward: 0.35, Exploration Efficiency: 0.00,Last loss = 0.0805823802947998
+Episode 300: Total Reward: 0.574609375, Avg Reward: 0.34, Exploration Efficiency: 0.00,Last loss = 0.08790557831525803
+Episode 350: Total Reward: 0, Avg Reward: 0.32, Exploration Efficiency: 0.00,Last loss = 0.1456553339958191
+Episode 400: Total Reward: 0.65546875, Avg Reward: 0.35, Exploration Efficiency: 0.00,Last loss = 0.12239658087491989
+Episode 450: Total Reward: 0.701171875, Avg Reward: 0.34, Exploration Efficiency: 0.00,Last loss = 0.015506180003285408
+Episode 500: Total Reward: 0.5640624999999999, Avg Reward: 0.28, Exploration Efficiency: 0.00,Last loss = 0.023257136344909668
+Episode 550: Total Reward: 0.778515625, Avg Reward: 0.31, Exploration Efficiency: 0.00,Last loss = 0.024959784001111984
+Episode 600: Total Reward: 0.708203125, Avg Reward: 0.36, Exploration Efficiency: 0.00,Last loss = 0.04449206218123436
+Episode 650: Total Reward: 0.33203125, Avg Reward: 0.40, Exploration Efficiency: 0.00,Last loss = 0.030418910086154938
+Episode 700: Total Reward: 0.49375, Avg Reward: 0.44, Exploration Efficiency: 0.00,Last loss = 0.012329481542110443
+Episode 750: Total Reward: 0, Avg Reward: 0.45, Exploration Efficiency: 0.00,Last loss = 0.07042593508958817
+Episode 800: Total Reward: 0.32148437499999993, Avg Reward: 0.46, Exploration Efficiency: 0.00,Last loss = 0.06352139264345169
+Episode 850: Total Reward: 0.680078125, Avg Reward: 0.46, Exploration Efficiency: 0.00,Last loss = 0.07625488936901093
+Episode 900: Total Reward: 0.4234375, Avg Reward: 0.49, Exploration Efficiency: 0.00,Last loss = 0.056239888072013855
+Episode 950: Total Reward: 0.3671875, Avg Reward: 0.47, Exploration Efficiency: 0.00,Last loss = 0.018773844465613365
+Episode 1000: Total Reward: 0, Avg Reward: 0.39, Exploration Efficiency: 0.00,Last loss = 0.08945609629154205
+Episode 1050: Total Reward: 0.57109375, Avg Reward: 0.41, Exploration Efficiency: 0.00,Last loss = 0.023986410349607468
+Episode 1100: Total Reward: 0.869921875, Avg Reward: 0.49, Exploration Efficiency: 0.00,Last loss = 0.07034795731306076
+Episode 1150: Total Reward: 0.609765625, Avg Reward: 0.54, Exploration Efficiency: 0.00,Last loss = 0.0198159608989954
+Episode 1200: Total Reward: 0.915625, Avg Reward: 0.60, Exploration Efficiency: 0.00,Last loss = 0.05354929342865944
+Episode 1250: Total Reward: 0.848828125, Avg Reward: 0.69, Exploration Efficiency: 0.00,Last loss = 0.05870792642235756
+Episode 1300: Total Reward: 0.834765625, Avg Reward: 0.71, Exploration Efficiency: 0.00,Last loss = 0.06274407356977463
+Episode 1350: Total Reward: 0.799609375, Avg Reward: 0.71, Exploration Efficiency: 0.00,Last loss = 0.051838845014572144
+Episode 1400: Total Reward: 0.803125, Avg Reward: 0.72, Exploration Efficiency: 0.00,Last loss = 0.03858648240566254
+Episode 1450: Total Reward: 0.8171875, Avg Reward: 0.76, Exploration Efficiency: 0.00,Last loss = 0.13299784064292908
+Episode 1500: Total Reward: 0.876953125, Avg Reward: 0.81, Exploration Efficiency: 0.00,Last loss = 0.035554029047489166
+Episode 1550: Total Reward: 0.92265625, Avg Reward: 0.79, Exploration Efficiency: 0.00,Last loss = 0.11156532913446426
+Episode 1600: Total Reward: 0.803125, Avg Reward: 0.77, Exploration Efficiency: 0.00,Last loss = 0.12440945953130722
+Episode 1650: Total Reward: 0.94375, Avg Reward: 0.79, Exploration Efficiency: 0.00,Last loss = 0.04502482712268829
+Episode 1700: Total Reward: 0.771484375, Avg Reward: 0.80, Exploration Efficiency: 0.00,Last loss = 0.05527506768703461
+Episode 1750: Total Reward: 0.7328125, Avg Reward: 0.80, Exploration Efficiency: 0.00,Last loss = 0.141179159283638
+Episode 1800: Total Reward: 0.954296875, Avg Reward: 0.81, Exploration Efficiency: 0.00,Last loss = 0.04542770981788635
+Episode 1850: Total Reward: 0.855859375, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.07657426595687866
+Episode 1900: Total Reward: 0.8875, Avg Reward: 0.85, Exploration Efficiency: 0.00,Last loss = 0.13201503455638885
+Episode 1950: Total Reward: 0.82421875, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.09048847109079361
+Episode 2000: Total Reward: 0.869921875, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.10091866552829742
+Episode 2050: Total Reward: 0.933203125, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.0988747701048851
+Episode 2100: Total Reward: 0.92265625, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.0554378516972065
+Episode 2150: Total Reward: 0.83125, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.08410786837339401
+Episode 2200: Total Reward: 0.602734375, Avg Reward: 0.85, Exploration Efficiency: 0.00,Last loss = 0.08962385356426239
+Episode 2250: Total Reward: 0.71171875, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.107335664331913
+Episode 2300: Total Reward: 0.81015625, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.056555163115262985
+Episode 2350: Total Reward: 0.876953125, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.2272210419178009
+Episode 2400: Total Reward: 0.859375, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.0656416267156601
+Episode 2450: Total Reward: 0.940234375, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.1114928349852562
+Episode 2500: Total Reward: 0.841796875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.0400153324007988
+Episode 2550: Total Reward: 0.898046875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.07483123987913132
+Episode 2600: Total Reward: 0.83125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.11987924575805664
+Episode 2650: Total Reward: 0.90859375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.08484005182981491
+Episode 2700: Total Reward: 0.89453125, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.08040070533752441
+Episode 2750: Total Reward: 0.90859375, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.13554218411445618
+Episode 2250: Total Reward: 0.71171875, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.107335664331913
+Episode 2300: Total Reward: 0.81015625, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.056555163115262985
+Episode 2350: Total Reward: 0.876953125, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.2272210419178009
+Episode 2400: Total Reward: 0.859375, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.0656416267156601
+Episode 2450: Total Reward: 0.940234375, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.1114928349852562
+Episode 2500: Total Reward: 0.841796875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.0400153324007988
+Episode 2550: Total Reward: 0.898046875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.07483123987913132
+Episode 2600: Total Reward: 0.83125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.11987924575805664
+Episode 2650: Total Reward: 0.90859375, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.08484005182981491
+Episode 2700: Total Reward: 0.89453125, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.08040070533752441
+Episode 2750: Total Reward: 0.90859375, Avg Reward: 0.90, Exploration EfficiencEpisode 2300: Total Reward: 0.81015625, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.056555163115262985
+Episode 2350: Total Reward: 0.876953125, Avg Reward: 0.82, Exploration Efficiency: 0.00,Last loss = 0.2272210419178009
+Episode 2400: Total Reward: 0.859375, Avg Reward: 0.83, Exploration Efficiency: 0.00,Last loss = 0.0656416267156601
+Episode 2450: Total Reward: 0.940234375, Avg Reward: 0.87, Exploration Efficiency: 0.00,Last loss = 0.1114928349852562
+Episode 2500: Total Reward: 0.841796875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.0400153324007988
+Episode 2550: Total Reward: 0.898046875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.07483123987913132
+Episode 2600: Total Reward: 0.83125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.11987924575805664
+Episode 2850: Total Reward: 0.834765625, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.1685291975736618
+Episode 2900: Total Reward: 0.8875, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.13453207910060883
+Episode 2950: Total Reward: 0.926171875, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.11272965371608734
+Episode 3000: Total Reward: 0.933203125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.10592493414878845
+Episode 3050: Total Reward: 0.9296875, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.2292010635137558
+Episode 3100: Total Reward: 0.89453125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.1372103989124298
+Episode 3150: Total Reward: 0.926171875, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.10613720118999481
+Episode 3200: Total Reward: 0.912109375, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.10515931993722916
+Episode 3250: Total Reward: 0.912109375, Avg Reward: 0.86, Exploration Efficiency: 0.00,Last loss = 0.1030912920832634
+Episode 3300: Total Reward: 0.947265625, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.13395777344703674
+Episode 3350: Total Reward: 0.915625, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.133782297372818
+Episode 3400: Total Reward: 0.95078125, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = 0.00881506409496069
+Episode 3450: Total Reward: 0.8875, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.19505149126052856
+Episode 3500: Total Reward: 0.95078125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.1482612043619156
+Episode 3550: Total Reward: 0.954296875, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.18511304259300232
+Episode 3600: Total Reward: 0.926171875, Avg Reward: 0.92, Exploration Efficiency: 0.00,Last loss = 0.2582160234451294
+Episode 3650: Total Reward: 0.89453125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.4142228066921234
+Episode 3700: Total Reward: 0.92265625, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.08191599696874619
+Episode 3750: Total Reward: 0.933203125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.19292673468589783
+Episode 3800: Total Reward: 0.905078125, Avg Reward: 0.90, Exploration Efficiency: 0.00,Last loss = 0.20369784533977509
+Episode 3850: Total Reward: 0.9296875, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.02074158377945423
+Episode 3900: Total Reward: 0.89453125, Avg Reward: 0.91, Exploration Efficiency: 0.00,Last loss = 0.08613882958889008
+Episode 3950: Total Reward: 0.947265625, Avg Reward: 0.89, Exploration Efficiency: 0.00,Last loss = 0.04458210989832878
+Experiment easy_task completed. Results saved to results/easy_task

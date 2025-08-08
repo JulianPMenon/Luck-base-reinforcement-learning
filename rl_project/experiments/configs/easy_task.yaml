@@ -4,7 +4,7 @@ name: "easy_task"
 env_name: "MiniGrid-Empty-8x8-v0"
 data_collection_episodes: 200
 contrastive_epochs: 100
-rl_episodes: 2000
+rl_episodes: 4000
 max_steps_per_episode: 200
 latent_dim: 128
 batch_size: 32

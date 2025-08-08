@@ -16,8 +16,9 @@ def load_config(config_path):
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
     
-def run_experiment(config: dict):
+def run_experiment(config: dict, seed:int):
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
+    torch.manual_seed(seed)
     print(f"Running experiment: {config['name']}")
     
     # 1. Initialize environment
@@ -39,7 +40,7 @@ def run_experiment(config: dict):
     state_dim = config['latent_dim']  # Use latent representation
     action_dim = len(config['actionmap'])
     print(action_dim)
-    contrastiv_rl_agent = Contrastiv_RL_agent(state_dim, action_dim, input_channels=3,latent_dim=config['latent_dim'], epsilon_decay=1-20/config['rl_episodes'], gamma = 1-2/config['rl_episodes']/100)
+    contrastiv_rl_agent = Contrastiv_RL_agent(state_dim, action_dim, input_channels=3,latent_dim=config['latent_dim'], epsilon_decay=1-20/config['rl_episodes'], gamma = 1-4/config['rl_episodes']/100)
     contrastiv_rl_agent.to(device)
     # contrastive_model = ContrastiveLearningAgent(
     #     input_channels=3,  # Assuming RGB images
@@ -81,7 +82,7 @@ def run_experiment(config: dict):
     # 7. Training
     print("Training RL agent with intrinsic rewards...")
     metrics = MetricsTracker()
-    optimizer = optim.Adam(contrastiv_rl_agent.rl_agent.q_network.parameters(), lr=0.0001)
+    optimizer = optim.Adam(contrastiv_rl_agent.rl_agent.q_network.parameters(), lr=0.00001)
     for episode in range(config['rl_episodes']):
         obs = env.reset()
         total_reward = 0
@@ -176,4 +177,4 @@ def run_experiment(config: dict):
     return metrics
 
 if __name__ == "__main__":
-    run_experiment(load_config('rl_project/experiments/configs/easy_task.yaml'))
+    run_experiment(load_config('rl_project/experiments/configs/moderate_task.yaml'), 0)

@@ -7,6 +7,7 @@ import random
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.utils.metrics import MetricsTracker
 from experiments.run_experiment_rnd import run_experiment_rnd
+import json
 
 def create_rnd_config(rl_episodes):
     # No random seed for stochastic search
@@ -48,13 +49,14 @@ if __name__ == '__main__':
             result = run_experiment_rnd(pop['config'], pop['metrics'], max_episodes=2**n * 50)
             pop['avg_reward'] = result.get_average_return(20)
             all_results.append({'config': pop['config'], 'avg_reward': pop['avg_reward']})
+        population.sort(key=getreward, reverse=True)
         # Use median reward for pruning
         rewards = [pop['avg_reward'] for pop in population]
         median_reward = np.median(rewards)
         if n < budget - 1:
-            population = [pop if pop['avg_reward'] >= median_reward else create_rnd_agent(create_rnd_config(budget)) for pop in population]
+            population = [pop if pop['avg_reward'] >= median_reward else create_rnd_agent(create_rnd_config(budget)) for pop in population[0:int(len(population) / 2)]]  # Keep only the top half
     # Save all results
-    import json
+    
     result_dir = f"results/{population[0]['config']['name']}_hyperband"
     os.makedirs(result_dir, exist_ok=True)
     with open(f"{result_dir}/all_results.json", "w") as f:

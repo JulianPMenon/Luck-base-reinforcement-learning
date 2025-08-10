@@ -193,8 +193,8 @@ def create_dict(rl_episodes):
     #         'gamma': rng[2]
     #         }
 
-    return {'name': "moderate_task",
-            'env_name': "MiniGrid-DoorKey-8x8-v0",
+    return {'name': "easy_task",
+            'env_name': "MiniGrid-Empty-8x8-v0",
             'data_collection_episodes': 8,
             'contrastive_epochs': 150,
             'rl_episodes': 4000,

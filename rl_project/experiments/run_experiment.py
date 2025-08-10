@@ -11,6 +11,7 @@ from src.utils.metrics import MetricsTracker
 from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
 from unit_tests import random_search
 import torch.optim as optim
+import torch.nn.functional as F
 
 def load_config(config_path):
     """Load configuration from a YAML file"""
@@ -104,47 +105,49 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
         max_episode = config['rl_episodes']
     else:
         max_episode = max_episodes
+    # --- Add TD-InfoNCE optimizer outside training loop ---
+    td_optimizer = optim.Adam(contrastiv_rl_agent.contrastive_model.parameters(), lr=0.0001)
+    td_infonce_interval = 10
     for episode in range(max_episode+1):
         obs = env.reset()
         total_reward = 0
         steps = 0
         visited_states = []
-        episode_transitions = []  # For HER
+        rl_transitions = []           # For RL/HER (detached)
+        contrastive_transitions = []  # For TD-InfoNCE (no detach)
         done = False
-        lastloss=-1
+        lastloss = -1
         while not done and steps < config['max_steps_per_episode']:
-            with torch.no_grad():
-                state_encoding = contrastiv_rl_agent.query_encoder(obs.unsqueeze(0))
-                visited_states.append(state_encoding.squeeze())
-            #print(f"state encoding: {state_encoding.squeeze().shape}")
-            action = contrastiv_rl_agent.act(state_encoding.squeeze())
+            # TD-InfoNCE: encode with grad enabled
+            state_encoding = contrastiv_rl_agent.query_encoder(obs.unsqueeze(0)).squeeze().to(device)
+            visited_states.append(state_encoding)
+            action = contrastiv_rl_agent.act(state_encoding)
 
             next_obs, reward, terminated, truncated, _ = env.step(config['actionmap'][action])
             done = terminated or truncated
-            # if reward != 0:
-            #     print(f"  Step {steps} | Reward: {reward:.2f} | Epoch: {episode}")
+
+            # Intrinsic reward and next_state_encoding for RL/HER (no grad needed)
             with torch.no_grad():
                 intrinsic_reward = contrastiv_rl_agent.compute_state_entropy(
                     next_obs.unsqueeze(0), memory_bank
                 ).item()
+                next_state_encoding_nograd = contrastiv_rl_agent.query_encoder(next_obs.unsqueeze(0)).squeeze().to(device)
 
-            with torch.no_grad():
-                next_state_encoding = contrastiv_rl_agent.query_encoder(next_obs.unsqueeze(0))
+            # TD-InfoNCE: encode next state with grad enabled
+            next_state_encoding = contrastiv_rl_agent.query_encoder(next_obs.unsqueeze(0)).squeeze().to(device)
 
-            # Store transition for HER: (state, action, reward, next_state, done, achieved_goal)
-            achieved_goal = next_state_encoding.squeeze().detach().clone()
-            episode_transitions.append((state_encoding.squeeze().detach().clone(), action, reward, next_state_encoding.squeeze().detach().clone(), done, achieved_goal))
+            # Store transitions
+            rl_transitions.append((state_encoding.detach(), action, reward, next_state_encoding_nograd.detach(), done))
+            contrastive_transitions.append((state_encoding, next_state_encoding))
 
-            # Standard experience replay
             contrastiv_rl_agent.remember(
-                state_encoding.squeeze(), action, reward, 
-                next_state_encoding.squeeze(), done, intrinsic_reward
+                state_encoding.detach(), action, reward,
+                next_state_encoding_nograd.detach(), done, intrinsic_reward
             )
 
             if len(contrastiv_rl_agent.memory()) > 100:
                 loss = contrastiv_rl_agent.train(optimizer)
                 lastloss = loss
-                # Ensure only float loss values are appended
                 try:
                     float_loss = float(loss)
                     metrics.update_loss(loss_type='rl', loss=float_loss)
@@ -158,16 +161,29 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
             metrics.update_intrinsic_reward(intrinsic_reward=intrinsic_reward)
 
         # --- Hindsight Experience Replay (HER) ---
-        K = 4  # Number of HER samples per transition
-        for t, (state, action, reward, next_state, done, _) in enumerate(episode_transitions):
-            future_idxs = torch.randint(t, len(episode_transitions), (K,))
+        K = 4
+        for t, (state, action, reward, next_state, done) in enumerate(rl_transitions):
+            future_idxs = torch.randint(t, len(rl_transitions), (K,))
             for idx in future_idxs:
-                new_goal = episode_transitions[idx][3]  # Use future next_state_encoding as new goal
-                # HER reward: 1 if next_state matches new_goal (within tolerance), else 0
-                # Here, use L2 distance threshold
+                new_goal = rl_transitions[idx][3]
                 her_reward = 1.0 if torch.norm(next_state - new_goal) < 1e-3 else 0.0
-                # Store HER transition (no intrinsic reward for HER transitions)
                 contrastiv_rl_agent.remember(state, action, her_reward, next_state, done, intrinsic_reward=0)
+
+        # --- TD-InfoNCE update ---
+        if episode % td_infonce_interval == 0 and len(contrastive_transitions) > config['batch_size']:
+            batch_idxs = torch.randint(0, len(contrastive_transitions), (config['batch_size'],))
+            batch_states = torch.stack([contrastive_transitions[i][0] for i in batch_idxs]).to(device)
+            batch_next_states = torch.stack([contrastive_transitions[i][1] for i in batch_idxs]).to(device)
+            query = F.normalize(batch_states, dim=1)
+            key = F.normalize(batch_next_states, dim=1)
+            logits = torch.mm(query, key.t()) / 0.1
+            labels = torch.arange(query.size(0), device=query.device)
+            td_loss = F.cross_entropy(logits, labels)
+            td_optimizer.zero_grad()
+            td_loss.backward()
+            td_optimizer.step()
+            if hasattr(metrics, 'update_loss'):
+                metrics.update_loss(loss_type='td_infonce', loss=td_loss.item())
 
         #if episode % 100 == 0:
         contrastiv_rl_agent.update_target_network()
@@ -219,4 +235,4 @@ if __name__ == "__main__":
             f.write(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['avg_reward']} | len(memory_bank): {len(population['memory_bank'])}\n")
             torch.save(contrastiv_rl_agent.contrastive_model.state_dict(), f"{result_dir}/contrastive_model_{seed}.pth")
             torch.save(contrastiv_rl_agent.rl_agent.state_dict(), f"{result_dir}/rl_agent_{seed}.pth")
-            
+

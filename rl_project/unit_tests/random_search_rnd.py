@@ -34,7 +34,7 @@ def getreward(d):
 
 
 if __name__ == '__main__':
-    # No global random seed
+    torch.manual_seed(0)  
     exponet = 6
     budget = 2 ** (exponet - 1)
     configs = [create_rnd_config(budget) for _ in range(budget)]

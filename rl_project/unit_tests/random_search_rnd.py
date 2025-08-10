@@ -48,7 +48,7 @@ if __name__ == '__main__':
             pop['metrics'] = MetricsTracker()
             rnd = RND(input_channels=3, feature_dim=pop['config']['feature_dim']).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
             result = run_experiment_rnd(pop['config'], pop['metrics'], lr=pop['config']['learning_rate'], agent=rnd, max_episodes=2**n * 50)
-            pop['avg_reward'] = result.get_average_return(20)
+            pop['avg_reward'] = result['metrics'].get_average_return(20)
             all_results.append({'config': pop['config'], 'avg_reward': pop['avg_reward']})
         population.sort(key=getreward, reverse=True)
         # Save and print best config for this budget round

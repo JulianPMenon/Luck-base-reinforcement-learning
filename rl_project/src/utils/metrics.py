@@ -14,7 +14,7 @@ class MetricsTracker:
         self.episode_lengths = []
         self.exploration_counts = {}
         self.intrinsic_rewards = []
-        self.losses = {'rl': [], 'contrastive': []}
+        self.losses = {'rl': [], 'contrastive': [], 'rnd': []}
         
     def update_episode(self, reward: float, length: int, visited_states: List):
         """Update metrics after an episode"""

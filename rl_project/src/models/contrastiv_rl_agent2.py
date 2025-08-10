@@ -58,9 +58,12 @@ class Contrastiv_RL_agent2(nn.Module):
             k = self.contrastive_model.key_encoder(k_state.unsqueeze(0))
         intrinsic_reward = self.contrastive_model.compute_infonce_loss(q,k)
         # Backward pass
+        self.optimizer.zero_grad()
+        intrinsic_reward.backward()
+        self.optimizer.step()
         with torch.no_grad():
-            self.rl_agent.remember(self.contrastive_model.query_encoder(state.unsqueeze(0)).squeeze(), action, reward, self.contrastive_model.query_encoder(next_state.unsqueeze(0)).squeeze(), done, intrinsic_reward)
-        return intrinsic_reward
+            self.rl_agent.remember(self.contrastive_model.query_encoder(state.unsqueeze(0)).squeeze(), action, reward, self.contrastive_model.query_encoder(next_state.unsqueeze(0)).squeeze(), done, intrinsic_reward.item())
+            return intrinsic_reward.item()
 
     def train(self,batch_size: int = 32) -> float:
         return self.rl_agent.train(batch_size)

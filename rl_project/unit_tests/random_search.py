@@ -10,6 +10,8 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 import minigrid
+from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
+import experiments.run_experiment as exp
 
 
 def fill_b(agent:RLAgent, env):
@@ -33,12 +35,7 @@ def fill_b(agent:RLAgent, env):
             for state, action, reward, next_state, done in mem:
                 agent.remember(state, action, reward, next_state, done)
 
-def create_agent(rng):
-    seed = 666666 #demo seed for testing
-    env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=True)
-    state_size = env.observation_space.shape[0]
-    agent = RLAgent(state_size=state_size, action_size=env.action_space.n, batch_size=128, epsilon = rng[0]*0.5+0.5, epsilon_decay=rng[1], epsilon_min=rng[2]*0.1, gamma=rng[3], learning_rate=rng[4]*0.2, intrinsic_weight=rng[5], hidden_size = 1 + int(rng[6]*256))
-    return {'agent':agent, 'config':rng, 'reward':0.0}
+
 
 def _create_agent(rng):
     seed = 666666 #demo seed for testing
@@ -47,7 +44,7 @@ def _create_agent(rng):
     agent = RLAgent(state_size=state_size, action_size=env.action_space.n, batch_size=128, epsilon = rng[0], epsilon_decay=rng[1], epsilon_min=rng[2], gamma=rng[3], learning_rate=rng[4], intrinsic_weight=rng[5], hidden_size = int(rng[6]))
     return {'agent':agent, 'config':rng, 'reward':0.0}
 
-def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True):
+def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""):
     symbolmap = {0: "L", 1: "R", 2: "W", 3: "P", 4: "D", 5: "T", 6: "E"}
     agent = pop['agent']
     grid_size_width = env.env.unwrapped.width  # assumes square grid
@@ -90,7 +87,7 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True):
         observation, _ = env.env.reset()
         env.env.unwrapped.agent_dir = 0
         observation = env.env.observation(observation)
-        fig, (ax1, ax2) = plt.subplots(1,2)
+        fig, (ax1, ax2) = plt.subplots(1,2,figsize=(16,8))
         ax1.imshow(observation['image'])
         sns.heatmap(ax=ax2, data = heatmap, square=True, annot=np.array([[symbolmap[action] for action in action_layer]for action_layer in actionmap_plot]), fmt='')
 
@@ -104,7 +101,9 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True):
             b, t = plt.xlim()
             ax2.hlines(y = (j) * 2, xmin = b, xmax = t, lw = 1, colors = 'black')
 #        fig.colorbar(ax2)
-        plt.show()
+        
+        fig.savefig(save_path)
+        #plt.show()
 
     # # Restore original position and direction
     # env.env.unwrapped.agent_pos = np.array(orig_pos)
@@ -175,24 +174,73 @@ def train(pop, budget, plot, position, max):
 
 
 def getreward(d):
-    return d["reward"]
+    return d["avg_reward"]
 
+def create_dict(rl_episodes):
+    rng = torch.rand(3)
+    # return {'name': "easy_task",
+    #         'env_name': "MiniGrid-Empty-8x8-v0",
+    #         'data_collection_episodes': 4,
+    #         'contrastive_epochs': 100,
+    #         'rl_episodes': rl_episodes,
+    #         'max_steps_per_episode': 200,
+    #         'latent_dim': 128,
+    #         'batch_size': 32,
+    #         'learning_rate': 0.001,
+    #         'actionmap': {0: 0, 1: 1, 2: 2},
+    #         'epsilon': rng[0],
+    #         'epsilon_decay': 1 - rng[1]/10,
+    #         'gamma': rng[2]
+    #         }
 
-if __name__ == '__main__':    
+    return {'name': "moderate_task",
+            'env_name': "MiniGrid-DoorKey-8x8-v0",
+            'data_collection_episodes': 8,
+            'contrastive_epochs': 150,
+            'rl_episodes': 4000,
+            'max_steps_per_episode': 300,
+            'latent_dim': 128,
+            'batch_size': 32,
+            'learning_rate': 0.001,
+            'actionmap': {0: 0, 1: 1, 2: 2, 3: 3, 4: 5},
+            'epsilon': rng[0],
+            'epsilon_decay': 1 - rng[1]/10,
+            'gamma': rng[2]
+            }
+    
+def create_agent(config):
+    state_dim = config['latent_dim']  # Use latent representation
+    action_dim = len(config['actionmap']) 
+    contrastiv_rl_agent = Contrastiv_RL_agent(state_dim, action_dim, input_channels=3,latent_dim=config['latent_dim'], epsilon= config['epsilon'], epsilon_decay=config['epsilon_decay'], gamma = config['gamma'])
+    metrics = MetricsTracker()
+    return {'agent':contrastiv_rl_agent, 'config':config, 'avg_reward':0.0, 'memory_bank':[], 'metrics':metrics}    
+
+if __name__ == '__main__':
+    torch.manual_seed(0)    
     exponet = 6
     budget = 2 ** (exponet - 1)
-    0,1,2,3,4 ,5 ,6 ,7
-    1,2,4,8,16,32,64,128
-    population = [create_agent(torch.rand(7)) for _ in range(budget)]
-    best = []
-    plot = True
-    seed = 666666
-    env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=True)
-    #epsilon: 0.827 | epsilon_decay: 0.1498 | epsilon_min: 0.07242 | gamma: 0.5619 | learning_rate: 0.09753 | intrinsic_weight: 0.8114 | hidden_size: 9
-    pop = _create_agent([0.827, 0.1498, 0.07242, 0.5619, 0.09753, 0.8114, 9.])
-    plot_heatMap(pop,env,{0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8})
-    # #train(pop,128,True,1,1)
-    # #for n in range(exponet):
+    configs = [create_dict(budget) for _ in range(budget)]
+    population = [create_agent(config=config) for config in configs]
+
+    for n in range(budget):
+        population = [exp.run_experiment(pop['config'],pop['agent'],pop['metrics'],2**n * 50,pop['memory_bank']) for position, pop in enumerate(population)]
+        population.sort(key=getreward, reverse=True)
+        if n < budget - 1:
+            population = [pop if pop['avg_reward'] > 0.00 else create_agent(create_dict(budget)) for pop in population[0:len(population)/2]]
+    plot_heatMap(pop = {'agent': population[0]['agent']}, env = MiniGridWrapper(population[0]['config']['env_name'], seed= 42), actionmap=population[0]['config']['actionmap'])
+    result_dir = f"results/{population[0]['config']['name']}"
+    population[0]['metrics'].plot_metrics(save_path=f"{result_dir}/metrics.png")
+    # 0,1,2,3,4 ,5 ,6 ,7
+    # 1,2,4,8,16,32,64,128
+    # best = []
+    # plot = True
+    # seed = 666666
+    # env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=True)
+    # #epsilon: 0.827 | epsilon_decay: 0.1498 | epsilon_min: 0.07242 | gamma: 0.5619 | learning_rate: 0.09753 | intrinsic_weight: 0.8114 | hidden_size: 9
+    # pop = _create_agent([0.827, 0.1498, 0.07242, 0.5619, 0.09753, 0.8114, 9.])
+    # plot_heatMap(pop,env,{0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8})
+    # # #train(pop,128,True,1,1)
+    # for n in range(exponet):
     #     if n == exponet-1:
     #         best = population[0]
     #         plot = True
@@ -201,13 +249,8 @@ if __name__ == '__main__':
     #     population.sort(key=getreward, reverse=True)
     #     population = [pop if pop['reward'] > 0.00 else create_agent(torch.rand(7)) for pop in population[0:int(budget/2**(n+1))]]
     # print(population[0])
-    #config = [0.4623, 0.5264, 0.6604, 0.6262, 0.07074, 0.9464]  
-    #train(best, 2**exponet)
-    from torch import nn
-    m = nn.Softmax(dim=1)
-    input = torch.randn(2, 3)
-    print(input)
-    output = m(input)
-    print(output)
+    # #config = [0.4623, 0.5264, 0.6604, 0.6262, 0.07074, 0.9464]  
+    # #train(best, 2**exponet)
+    
     
 

@@ -9,7 +9,7 @@ from typing import Dict, Tuple, List
 class RLAgent(nn.Module):
     """DQN agent with intrinsic motivation"""
     
-    def __init__(self, state_dim: int, action_dim: int, hidden_dim: int = 256, epsilon_decay:float = 0.995, gamma = 0.999):
+    def __init__(self, state_dim: int, action_dim: int, hidden_dim: int = 256, epsilon = 1, epsilon_decay:float = 0.995, gamma = 0.999):
         super().__init__()
         self.action_dim = action_dim
         
@@ -35,7 +35,7 @@ class RLAgent(nn.Module):
         self.update_target_network()
         
         # Hyperparameters
-        self.epsilon = 1.0
+        self.epsilon = epsilon
         self.epsilon_decay = epsilon_decay
         self.epsilon_min = 0.01
         self.gamma = gamma
@@ -67,7 +67,7 @@ class RLAgent(nn.Module):
         """Store experience in memory"""
         total_reward = reward + self.intrinsic_weight * intrinsic_reward
         # if reward != 0:
-        #     print(f"[RLAgent] Remember: reward={reward}, intrinsic_reward={intrinsic_reward}, total_reward={total_reward}")
+        # print(f"[RLAgent] Remember: reward={reward}, intrinsic_reward={intrinsic_reward}, total_reward={total_reward}")
         self.memory.append((state, action, total_reward, next_state, done))
     
     def train(self, optimizer, batch_size: int = 32) -> float:
@@ -82,7 +82,6 @@ class RLAgent(nn.Module):
         rewards = torch.tensor([e[2] for e in batch], dtype=torch.float32).to(device)
         next_states = torch.stack([e[3] for e in batch]).to(device)
         dones = torch.tensor([e[4] for e in batch], dtype=torch.bool).to(device)
-        #print(f"states: {states.shape}")
             
         current_q_values = self.q_network(states/batch_size)
         if float('nan') in current_q_values[0]:

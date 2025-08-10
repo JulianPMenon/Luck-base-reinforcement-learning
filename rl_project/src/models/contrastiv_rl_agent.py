@@ -11,11 +11,11 @@ from src.models.contrastive_model import ContrastiveLearningAgent
 from src.training.contrastive_trainer import ContrastiveTrainer
 
 class Contrastiv_RL_agent(nn.Module):
-    def __init__(self, state_dim: int, action_dim: int, learning_rate: float = 1e-3, hidden_dim: int = 256, input_channels: int = 3, latent_dim: int = 128, tau: float = 0.1, epsilon_decay = 0.995, gamma = 0.99):
+    def __init__(self, state_dim: int, action_dim: int, learning_rate: float = 1e-3, hidden_dim: int = 256, input_channels: int = 3, latent_dim: int = 128, tau: float = 0.1, epsilon = 1, epsilon_decay = 0.995, gamma = 0.99):
         super().__init__()
         self.contrastive_model = ContrastiveLearningAgent(input_channels=input_channels, latent_dim=latent_dim, tau=tau)
         self.contrastive_trainer = ContrastiveTrainer(self.contrastive_model, learning_rate=learning_rate)
-        self.rl_agent = RLAgent(state_dim, action_dim, hidden_dim=hidden_dim, epsilon_decay = epsilon_decay, gamma = gamma)
+        self.rl_agent = RLAgent(state_dim, action_dim, hidden_dim=hidden_dim, epsilon = epsilon, epsilon_decay = epsilon_decay, gamma = gamma)
 
 
 

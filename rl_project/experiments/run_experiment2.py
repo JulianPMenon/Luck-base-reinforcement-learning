@@ -25,14 +25,16 @@ def run_experiment(config: dict, seed:int):
     env = MiniGridWrapper(config['env_name'], seed= 42)
     
     # 2. Collect data for contrastive learning
-    print("                                           |   mmm  \n"
-          "Collecting data for contrastive learning...|  (@_@) \n"
-          "                                           | <( : )>\n"
-          "                                           |   / \  \n"
+    print("                                           |   mmm   |\n"
+          "Collecting data for contrastive learning...|  (@_@)  |\n"
+          "                                           | <( : )> |\n"
+          "                                           |   / \   |\n"
           )
     
     data_collector = DataCollector(max_episodes=config['data_collection_episodes'])
     observations = data_collector.collect_data(env)
+    print(len(observations))
+    return
     queries, keys = data_collector.create_contrastive_pairs(observations, mode="NOISE")
     queries = queries.to(device)
     keys = keys.to(device)
@@ -48,10 +50,10 @@ def run_experiment(config: dict, seed:int):
     # )
     
     # 4. Train contrastive model
-    print("                                           |   mmm  \n"
-          "Training contrastive model...              |  (O.O) \n"
-          "                                           | <( : )>\n"
-          "                                           |   / \  \n"
+    print("                                           |   mmm   |\n"
+          "Training contrastive model...              |  (O.O)  |\n"
+          "                                           | <( : )> |\n"
+          "                                           |   / \   |\n"
           )
     #contrastive_trainer = ContrastiveTrainer(contrastive_model)
     contrastive_losses = contrastiv_rl_agent.train_contrastive_model(
@@ -148,8 +150,8 @@ def run_experiment(config: dict, seed:int):
                 # Store HER transition (no intrinsic reward for HER transitions)
                 contrastiv_rl_agent.remember(state, action, her_reward, next_state, done, intrinsic_reward=0)
 
-        #if episode % 100 == 0:
-        contrastiv_rl_agent.update_target_network()
+        if episode % 100 == 0:
+            contrastiv_rl_agent.update_target_network()
 
         if episode % 10 == 0:
             contrastiv_rl_agent.epsilon_decay()

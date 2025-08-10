@@ -1,0 +1,73 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+import torch
+import numpy as np
+import yaml
+import copy
+from src.environments.minigrid_wrapper import MiniGridWrapper
+from src.utils.data_collection import DataCollector
+from src.utils.metrics import MetricsTracker
+from src.models.rnd_ import RND
+import torch.optim as optim
+import torch.nn.functional as F
+
+def load_config(config_path):
+    with open(config_path, 'r') as f:
+        return yaml.safe_load(f)
+
+def run_experiment_rnd(config, metrics, max_episodes=0):
+    device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
+    print(f"Running RND baseline: {config['name']}")
+    env = MiniGridWrapper(config['env_name'], seed=42)
+    rnd = RND(input_channels=3, feature_dim=128).to(device)
+    optimizer = optim.Adam(rnd.predictor_network.parameters(), lr=0.0001)
+    max_episode = config['rl_episodes'] if max_episodes == 0 else max_episodes
+    rnd_losses = []
+    for episode in range(max_episode+1):
+        obs = env.reset()
+        total_reward = 0
+        steps = 0
+        done = False
+        while not done and steps < config['max_steps_per_episode']:
+            # Convert numpy to torch if needed
+            if isinstance(obs, (np.ndarray,)):
+                obs = torch.from_numpy(obs)
+            obs_tensor = obs.unsqueeze(0).permute(0, 3, 1, 2).to(device)
+            # Compute intrinsic reward
+            intrinsic_reward = rnd.compute_intrinsic_reward(obs_tensor).item()
+            # Take random action
+            action_key = np.random.choice(list(config['actionmap'].keys()))
+            next_obs, reward, terminated, truncated, _ = env.step(config['actionmap'][action_key])
+            done = terminated or truncated
+            # Convert numpy to torch if needed
+            if isinstance(next_obs, (np.ndarray,)):
+                next_obs = torch.from_numpy(next_obs)
+            next_obs_tensor = next_obs.unsqueeze(0).permute(0, 3, 1, 2).to(device)
+            target_features, predicted_features = rnd(next_obs_tensor)
+            loss = F.mse_loss(predicted_features, target_features.detach())
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            rnd_losses.append(loss.item())
+            total_reward += reward + intrinsic_reward
+            steps += 1
+            obs = next_obs
+            metrics.update_intrinsic_reward(intrinsic_reward=intrinsic_reward)
+        metrics.update_episode(total_reward, steps, [])
+        if episode % 10 == 0:
+            avg_reward = metrics.get_average_return()
+            avg_rnd_loss = np.mean(rnd_losses[-steps:]) if steps > 0 else 0.0
+            print(f"[RND] Episode {episode}: Total Reward: {total_reward}, Avg Reward: {avg_reward:.2f}, Avg RND Loss: {avg_rnd_loss:.4f}")
+    result_dir = f"results/{config['name']}_rnd"
+    os.makedirs(result_dir, exist_ok=True)
+    metrics.plot_metrics(save_path=f"{result_dir}/metrics.png")
+    torch.save(rnd.predictor_network.state_dict(), f"{result_dir}/rnd_predictor.pth")
+    print(f"RND baseline completed. Results saved to {result_dir}")
+    return metrics
+
+if __name__ == "__main__":
+    config = load_config('rl_project/experiments/configs/easy_task.yaml')
+    metrics = MetricsTracker()
+    run_experiment_rnd(config, metrics)

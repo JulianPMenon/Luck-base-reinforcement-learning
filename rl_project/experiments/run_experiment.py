@@ -202,7 +202,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
     return {'agent':best_agent, 'config':config, 'avg_reward':best_avg_reward, 'memory_bank':memory_bank, 'metrics':metrics, 'epoch':best_epoch, 'epsilon':best_epsilon}
 
 if __name__ == "__main__":
-    config = load_config('rl_project/experiments/configs/moderate_task.yaml')
+    config = load_config('rl_project/experiments/configs/moderate_task_lava_gap.yaml')
     result_dir = f"results/{config['name']}/contrastiv"
     with open(result_dir+"/results.txt", 'a') as f:
         for seed in range(1):

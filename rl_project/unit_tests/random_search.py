@@ -85,7 +85,7 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""
     #print(np.array([[symbolmap[action] for action in action_layer]for action_layer in actionmap_plot]))
     if plot:
         observation, _ = env.env.reset()
-        env.env.unwrapped.agent_dir = 0
+        #env.env.unwrapped.agent_dir = 0
         observation = env.env.observation(observation)
         fig, (ax1, ax2) = plt.subplots(1,2,figsize=(16,8))
         ax1.imshow(observation['image'])
@@ -193,20 +193,35 @@ def create_dict(rl_episodes):
     #         'gamma': rng[2]
     #         }
 
-    return {'name': "moderate_task",
-            'env_name': "MiniGrid-DoorKey-8x8-v0",
-            'data_collection_episodes': 8,
-            'contrastive_epochs': 150,
-            'rl_episodes': 4000,
-            'max_steps_per_episode': 300,
+    return {'name': "moderate_task_lava_gap",
+            'env_name': "MiniGrid-LavaGapS7-v0",
+            'data_collection_episodes': 4,
+            'contrastive_epochs': 100,
+            'rl_episodes': rl_episodes,
+            'max_steps_per_episode': 200,
             'latent_dim': 128,
             'batch_size': 32,
             'learning_rate': 0.001,
-            'actionmap': {0: 0, 1: 1, 2: 2, 3: 3, 4: 5},
+            'actionmap': {0: 0, 1: 1, 2: 2},
             'epsilon': rng[0],
             'epsilon_decay': 1 - rng[1]/10,
             'gamma': rng[2]
             }
+
+    # return {'name': "moderate_task",
+    #         'env_name': "MiniGrid-DoorKey-8x8-v0",
+    #         'data_collection_episodes': 8,
+    #         'contrastive_epochs': 150,
+    #         'rl_episodes': 4000,
+    #         'max_steps_per_episode': 300,
+    #         'latent_dim': 128,
+    #         'batch_size': 32,
+    #         'learning_rate': 0.001,
+    #         'actionmap': {0: 0, 1: 1, 2: 2, 3: 3, 4: 5},
+    #         'epsilon': rng[0],
+    #         'epsilon_decay': 1 - rng[1]/10,
+    #         'gamma': rng[2]
+    #         }
     
 def create_agent(config):
     state_dim = config['latent_dim']  # Use latent representation

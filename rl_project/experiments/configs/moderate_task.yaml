@@ -2,7 +2,7 @@
 # This file is used to set up the environment, model, and training parameters.
 name: "moderate_task"
 env_name: "MiniGrid-DoorKey-8x8-v0"
-data_collection_episodes: 40
+data_collection_episodes: 16
 contrastive_epochs: 150
 rl_episodes: 4000
 max_steps_per_episode: 300

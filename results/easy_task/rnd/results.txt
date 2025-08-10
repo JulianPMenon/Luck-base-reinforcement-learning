@@ -1,0 +1,3 @@
+seed: 0 | avg_reward: 0.30627476822089506
+seed: 0 | avg_reward: 0.24027302748340074
+seed: 0 | avg_reward: 0.24750554603296074 | best_avg_reward: 0.6725918582775647 | best_weights: results/easy_task_rnd/best_weights.pth

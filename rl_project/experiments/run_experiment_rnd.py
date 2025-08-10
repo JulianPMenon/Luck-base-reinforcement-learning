@@ -96,16 +96,16 @@ def run_experiment_rnd(config, metrics, lr , agent, max_episodes=0):
     }
 
 if __name__ == "__main__":
-    config = load_config('rl_project/experiments/configs/easy_task.yaml')
+    config = load_config('rl_project/experiments/configs/moderate_task.yaml')
     result_dir = f"results/{config['name']}/rnd"
     with open(result_dir+"/results.txt", 'a') as f:
         for seed in range(10):
             print(seed)
             torch.manual_seed(seed)
-            feature_dim = 192  
+            feature_dim = 128  
             rnd = RND(input_channels=3, feature_dim=feature_dim).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
             metrics = MetricsTracker()
-            population = run_experiment_rnd(config,agent=rnd, metrics=metrics, lr=0.00044, max_episodes=800)
+            population = run_experiment_rnd(config,agent=rnd, metrics=metrics, lr=0.00015, max_episodes=400)
             #random_search.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
             population['metrics'].plot_metrics(save_path=f"{result_dir}/metrics_{seed}_.png")
             print(f"seed: {seed} | avg_reward: {population['avg_reward']} | best_avg_reward: {population['best_avg_reward']} | best_weights: {population['best_weights_path']}")

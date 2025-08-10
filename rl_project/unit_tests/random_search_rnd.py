@@ -5,6 +5,7 @@ import numpy as np
 import random
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.utils.metrics import MetricsTracker
+from src.models.rnd_ import RND
 from experiments.run_experiment_rnd import run_experiment_rnd
 import json
 
@@ -45,7 +46,8 @@ if __name__ == '__main__':
         for position, pop in enumerate(population):
             print(f"Hyperband RND | Budget: {2**n * 50} | {position+1} of {len(population)}")
             pop['metrics'] = MetricsTracker()
-            result = run_experiment_rnd(pop['config'], pop['metrics'], max_episodes=2**n * 50)
+            rnd = RND(input_channels=3, feature_dim=pop['config']['feature_dim']).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
+            result = run_experiment_rnd(pop['config'], pop['metrics'], lr=pop['config']['learning_rate'], agent=rnd, max_episodes=2**n * 50)
             pop['avg_reward'] = result.get_average_return(20)
             all_results.append({'config': pop['config'], 'avg_reward': pop['avg_reward']})
         population.sort(key=getreward, reverse=True)

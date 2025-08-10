@@ -18,13 +18,13 @@ def load_config(config_path):
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-def run_experiment_rnd(config, metrics, agent, max_episodes=0):
+def run_experiment_rnd(config, metrics, lr , agent, max_episodes=0):
     
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
     print(f"Running RND baseline: {config['name']}")
     env = MiniGridWrapper(config['env_name'], seed=42)
     rnd = agent.to(device)
-    optimizer = optim.Adam(rnd.predictor_network.parameters(), lr=0.00044)
+    optimizer = optim.Adam(rnd.predictor_network.parameters(), lr=lr)
     max_episode = config['rl_episodes'] if max_episodes == 0 else max_episodes
     rnd_losses = []
     best_avg_reward = float('-inf')
@@ -105,7 +105,7 @@ if __name__ == "__main__":
             feature_dim = 192  
             rnd = RND(input_channels=3, feature_dim=feature_dim).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
             metrics = MetricsTracker()
-            population = run_experiment_rnd(config,agent=rnd, metrics=metrics, max_episodes=800)
+            population = run_experiment_rnd(config,agent=rnd, metrics=metrics, lr=0.00044, max_episodes=800)
             #random_search.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
             population['metrics'].plot_metrics(save_path=f"{result_dir}/metrics_{seed}_.png")
             print(f"seed: {seed} | avg_reward: {population['avg_reward']} | best_avg_reward: {population['best_avg_reward']} | best_weights: {population['best_weights_path']}")

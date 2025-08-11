@@ -19,7 +19,7 @@ class RLAgent(nn.Module):
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
             nn.Linear(hidden_dim, action_dim),
-            #nn.Sigmoid()
+            
         )
         
         self.target_network = nn.Sequential(
@@ -28,7 +28,7 @@ class RLAgent(nn.Module):
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
             nn.Linear(hidden_dim, action_dim),
-            #nn.Sigmoid()
+
         )
         
         # Copy weights to target network
@@ -50,24 +50,19 @@ class RLAgent(nn.Module):
     
     def act(self, state: torch.Tensor) -> int:
         """Choose action using epsilon-greedy policy"""
-        # Debug: print epsilon value
-        #print(f"[RLAgent] Epsilon: {self.epsilon:.4f}")
         if random.random() < self.epsilon:
             action = random.randrange(self.action_dim)
-            #print(f"[RLAgent] Random action: {action}")
+        
             return action
         with torch.no_grad():
-            #print(f"state: {state.unsqueeze(0).shape}")
+            
             q_values = self.q_network(state.unsqueeze(0)/32)
             action = q_values.argmax().item()
-            #print(f"[RLAgent] Greedy action: {action}, Q-values: {q_values.tolist()}")
             return action
     
     def remember(self, state, action, reward, next_state, done, intrinsic_reward=0):
         """Store experience in memory"""
         total_reward = reward + self.intrinsic_weight * intrinsic_reward
-        # if reward != 0:
-        # print(f"[RLAgent] Remember: reward={reward}, intrinsic_reward={intrinsic_reward}, total_reward={total_reward}")
         self.memory.append((state, action, total_reward, next_state, done))
     
     def train(self, optimizer, batch_size: int = 32) -> float:
@@ -94,16 +89,12 @@ class RLAgent(nn.Module):
         target_q_values = rewards + (self.gamma * next_q_values * ~dones)
         criterion = nn.L1Loss()
         loss = criterion(current_q_values.squeeze(), target_q_values)
-        # Debug: print loss value
-        #print(f"[RLAgent] Training loss: {loss.item()}")
+        
         # Backward pass
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        # Decay epsilon
-        # if self.epsilon > self.epsilon_min:
-        #     self.epsilon *= self.epsilon_decay
-            #print(f"[RLAgent] Epsilon decayed to: {self.epsilon}")
+        # Epsilon Decay will be called externaly
         return loss.item()
 
     def decay_epsilon(self):

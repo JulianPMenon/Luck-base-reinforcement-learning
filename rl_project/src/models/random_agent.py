@@ -7,6 +7,7 @@ from src.environments.minigrid_wrapper import MiniGridWrapper
 # Test with random agent in MiniGrid
 
 def run_random_agent(episodes=20, max_steps=100, seed=42):
+    """Run a random agent in the MiniGrid environment. This was used to test the environment setup."""
     env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=False)
     total_rewards = []
     for episode in range(episodes):

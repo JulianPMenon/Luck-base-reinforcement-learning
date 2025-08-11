@@ -5,7 +5,16 @@ from typing import Dict, Tuple
 from .encoder import ContrasiveEncoder
 
 class ContrastiveLearningAgent(nn.Module):
-
+    """
+    Contrastive learning agent with query and key encoders.
+    
+    Momentum is used to update the key encoder with an exponential moving average of the query encoder parameters.
+    The InfoNCE loss is computed between the query and key encodings.
+    The agent uses a temperature parameter to control the sharpness of the InfoNCE loss.
+    
+    The agent can also compute state entropy for intrinsic reward calculation.
+    For this KNN-based entropy estimation, the memory bank is used to store past state encodings.
+    """
     def __init__(self, input_channels: int = 3, latent_dim: int = 128, tau: float = 0.1):
         super().__init__()
         self.tau = tau  # temperature parameter

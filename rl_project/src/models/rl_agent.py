@@ -7,7 +7,7 @@ import random
 from typing import Dict, Tuple, List
 
 class RLAgent(nn.Module):
-    
+    """DQN agent with intrinsic motivation and convolutional layers that we did not use in the end"""
     def __init__(self, state_size: int, action_size: int, hidden_size: int = 128, epsilon: float = 1.0, epsilon_decay: float = 0.995, 
                  epsilon_min: float = 0.01, gamma: float = 0.99, learning_rate: float = 1e-3, intrinsic_weight: float = 0.1, batch_size: int = 64, memory_size: int = 1000):
         super().__init__()
@@ -31,7 +31,6 @@ class RLAgent(nn.Module):
         else:
             state_size = int(state_size)
         self.expected_state_size = state_size
-        #print(f"Creating networks with state_size: {state_size}")
                                  
         self.q_network = nn.Sequential(
             nn.Conv2d(state_size, hidden_size, kernel_size=3, stride=1, padding=1),

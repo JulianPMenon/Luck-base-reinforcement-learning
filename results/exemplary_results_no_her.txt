@@ -1,0 +1,31 @@
+Running experiment (no HER): easy_task, 0.2698335647583008, 0.984932005405426, 0.03171950578689575
+Running experiment: easy_task
+Collecting data for contrastive learning...
+797
+Training contrastive model...
+Dataset size: 797
+Batch size: 32
+Batches per epoch: 24
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.5900
+Epoch 10/100, Loss: 1.0491
+Epoch 20/100, Loss: 0.6798
+Epoch 30/100, Loss: 0.5627
+Epoch 40/100, Loss: 0.5118
+Epoch 50/100, Loss: 0.4728
+Epoch 60/100, Loss: 0.4815
+Epoch 70/100, Loss: 0.4245
+Epoch 80/100, Loss: 0.4304
+Epoch 90/100, Loss: 0.4374
+Building memory bank...
+Training RL agent with intrinsic rewards (no HER)...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.013168098405003548
+Episode 10: Total Reward: 0.6871093749999999, Avg Reward: 0.42, Exploration Efficiency: 0.00,Last loss = 0.006407514214515686
+Episode 20: Total Reward: 0.5992187499999999, Avg Reward: 0.55, Exploration Efficiency: 0.00,Last loss = 0.018925221636891365
+Episode 30: Total Reward: 0.806640625, Avg Reward: 0.59, Exploration Efficiency: 0.00,Last loss = 0.02940356358885765
+Episode 40: Total Reward: 0.715234375, Avg Reward: 0.57, Exploration Efficiency: 0.00,Last loss = 0.004465573932975531
+Episode 50: Total Reward: 0.743359375, Avg Reward: 0.59, Exploration Efficiency: 0.00,Last loss = 0.005046524107456207
+Experiment easy_task (no HER) completed. Results saved to results/easy_task_no_her
+Running experiment (no HER): easy_task, 0.20812976360321045, 0.907020092010498, 0.7231091856956482
+

@@ -31,7 +31,6 @@ class RND(nn.Module):
             param.requires_grad = False
             
     def forward(self, x):
-        # Do not set eval/train mode here; let agent control externally
         # Ensure input is on same device as networks
         x = x.to(next(self.parameters()).device)
         target_features = self.target_network(x)

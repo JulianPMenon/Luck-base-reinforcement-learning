@@ -3,7 +3,11 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.models.encoder import ContrasiveEncoder
 from src.environments.minigrid_wrapper import MiniGridWrapper
-
+"""
+    This file was for an old memory bank tat was over engineered and is not used anymore.
+    It is kept here for reference and to avoid confusion with the new, simpler intrinsic reward implementation.
+    We now use just an array of encodings instead.  
+"""
 # Load model and memory bank
 model = ContrasiveEncoder(input_channels=3, latent_dim=128)
 model.load_state_dict(torch.load('models/easy_contrastive_model.pth'))

@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.environments.minigrid_wrapper import MiniGridWrapper
-from src.models.rl_agent import RLAgent
+from src.models.rl_agent2 import RLAgent
 from src.utils.metrics import MetricsTracker
 
 def plot_q_heatmap(agent, env, title="Q-value Heatmap"):
@@ -24,7 +24,8 @@ def plot_q_heatmap(agent, env, title="Q-value Heatmap"):
             env.env.unwrapped.agent_dir = 0
             obs, _ = env.env.reset()
             obs_tensor = env.preprocess_observation(obs)
-            state = obs_tensor.flatten()
+            # Fix: flatten only if obs_tensor is not already 1D
+            state = obs_tensor.flatten() if obs_tensor.dim() > 1 else obs_tensor
             if state.shape[0] != agent.expected_state_size:
                 print(f"State shape mismatch at ({x},{y}): got {state.shape[0]}, expected {agent.expected_state_size}")
                 continue
@@ -74,8 +75,9 @@ for episode in range(100):
     observation = env.reset()
     obs, _ = env.env.reset()
     obs_tensor = env.preprocess_observation(obs)
-    print(f"Episode {episode} - Initial Observation stats: mean={observation.mean():.4f}, std={observation.std():.4f}, shape={observation.shape}")
-    state = observation.flatten()  # Normalize the state
+    # Fix: flatten only if obs_tensor is not already 1D
+    state = observation.flatten() if isinstance(observation, np.ndarray) and observation.ndim > 1 else observation
+    print(f"Episode {episode} - Initial Observation stats: mean={np.mean(observation):.4f}, std={np.std(observation):.4f}, shape={observation.shape}")
     done = False
     steps = 0
     total_reward = 0
@@ -84,14 +86,14 @@ for episode in range(100):
         action = agent.act(state)
         next_observation, reward, terminated, truncated, _ = env.step(action)
         done = terminated or truncated
-        next_state = next_observation.flatten() # Normalize the next state
+        next_state = next_observation.flatten() if isinstance(next_observation, np.ndarray) and next_observation.ndim > 1 else next_observation
         
         agent.remember(state, action, reward, next_state, done)
-        if len(agent.memory) > agent.batch_size:    
+        if len(agent.memory) > agent.batch_size:
             prev_weights_norm = get_weights_norm(agent)
             loss = agent.train()
             new_weights_norm = get_weights_norm(agent)
-            if loss > 0:
+            if loss is not None and loss > 0:
                 metrics.update_loss(loss_type='rl', loss=loss)
             if steps % 10 == 0:
                 print(f"    Q-network weights norm before: {prev_weights_norm:.6f}, after: {new_weights_norm:.6f}, diff: {new_weights_norm - prev_weights_norm:.6f}")

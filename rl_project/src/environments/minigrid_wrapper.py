@@ -153,7 +153,10 @@ class MiniGridWrapper():
             obs_tensor = obs_tensor.flatten()
     
         device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
-        return obs_tensor.permute(1,2,0).to(device)
+        if obs_tensor.ndim == 3:
+            return obs_tensor.permute(1,2,0).to(device)
+        else:
+            return obs_tensor.to(device)
     
     def render(self):
         """

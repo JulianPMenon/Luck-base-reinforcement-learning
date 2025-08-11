@@ -1,0 +1,10 @@
+seed: 0 | avg_reward: 0.014028210532208067 | best_avg_reward: 0.04062361889985764 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 1 | avg_reward: 0.02453471619508999 | best_avg_reward: 0.0245351202203453 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 2 | avg_reward: 0.02362340138643089 | best_avg_reward: 0.025054560911720605 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 3 | avg_reward: 0.004907617261780877 | best_avg_reward: 0.013594803718406658 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 4 | avg_reward: 9.182952188133697e-06 | best_avg_reward: 0.029217004043762138 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 5 | avg_reward: 0.025713253315172616 | best_avg_reward: 0.032040020990970676 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 6 | avg_reward: 0.024956602225014786 | best_avg_reward: 0.030416024416111295 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 7 | avg_reward: 0.024164751694402808 | best_avg_reward: 0.03479918612406467 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 8 | avg_reward: 0.022136041165220076 | best_avg_reward: 0.04651258694524716 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth
+seed: 9 | avg_reward: 0.01150725828873768 | best_avg_reward: 0.031171916581403565 | best_weights: results/moderate_task_lava_gap_rnd/best_weights.pth

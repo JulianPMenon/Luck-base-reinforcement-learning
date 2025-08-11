@@ -77,10 +77,10 @@ def run_experiment_rnd(config, metrics, lr , agent, max_episodes=0):
             if avg_reward > best_avg_reward:
                 best_avg_reward = avg_reward
                 best_weights = copy.deepcopy(rnd.state_dict())
-                best_weights_path = f"results/{config['name']}/best_weights.pth"
+                best_weights_path = f"results/{config['name']}/rnd/best_weights.pth"
                 torch.save(best_weights, best_weights_path)
     
-    result_dir = f"results/{config['name']}"
+    result_dir = f"results/{config['name']}/rnd"
     os.makedirs(result_dir, exist_ok=True)
     metrics.plot_metrics(save_path=f"{result_dir}/metrics.png")
     torch.save(rnd.predictor_network.state_dict(), f"{result_dir}/rnd_predictor.pth")

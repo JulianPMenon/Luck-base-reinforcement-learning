@@ -16,7 +16,6 @@ import experiments.run_experiment as exp
 
 def fill_b(agent:RLAgent, env):
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
-    #print(f"Episode {episode} - Initial Observation stats: mean={observation.mean():.4f}, std={observation.std():.4f}, shape={observation.shape}")
     while len(agent.memory) < agent.max_memory:
         observation = env.reset()
         state = observation / 255.0  # Normalize the state
@@ -37,12 +36,12 @@ def fill_b(agent:RLAgent, env):
 
 
 
-def _create_agent(rng):
-    seed = 666666 #demo seed for testing
-    env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=True)
-    state_size = env.observation_space.shape[0]
-    agent = RLAgent(state_size=state_size, action_size=env.action_space.n, batch_size=128, epsilon = rng[0], epsilon_decay=rng[1], epsilon_min=rng[2], gamma=rng[3], learning_rate=rng[4], intrinsic_weight=rng[5], hidden_size = int(rng[6]))
-    return {'agent':agent, 'config':rng, 'reward':0.0}
+# def _create_agent(rng):
+#     seed = 666666 #demo seed for testing
+#     env = MiniGridWrapper('MiniGrid-Empty-5x5-v0', seed=seed, cnn=True)
+#     state_size = env.observation_space.shape[0]
+#     agent = RLAgent(state_size=state_size, action_size=env.action_space.n, batch_size=128, epsilon = rng[0], epsilon_decay=rng[1], epsilon_min=rng[2], gamma=rng[3], learning_rate=rng[4], intrinsic_weight=rng[5], hidden_size = int(rng[6]))
+#     return {'agent':agent, 'config':rng, 'reward':0.0}
 
 def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""):
     symbolmap = {0: "L", 1: "R", 2: "W", 3: "P", 4: "D", 5: "T", 6: "E"}
@@ -58,13 +57,8 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""
     for x in range(grid_size_height):
         # y = width
         for y in range(grid_size_width):
-            #print(state)
-            #if state.shape[0] != agent.expected_state_size:
-            #    print(f"State shape mismatch at ({x},{y}): got {state.shape[0]}, expected {agent.expected_state_size}")
-            #    continue
             with torch.no_grad():
                 enumerate({(0,0),(0,1),(1,0),(1,1)})
-
                 #####
                 #(0,0)^  (1,0)->
                 #(0,1)<- (1,1)|
@@ -73,19 +67,15 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""
                     env.env.unwrapped.agent_pos = (x, y)
                     env.env.unwrapped.agent_dir = n
                     observation = env.env.observation(observation)
-                    state = env.preprocess_observation(observation['image'])# / 255.0
+                    state = env.preprocess_observation(observation['image'])
                     q_values = agent.q_forward(state/batch_size)
                     max_q = round(q_values[0].max().item(), 2)
-                    heatmap[x * 2 + x_add, y * 2 + y_add] = max_q  # y is row, x is col
+                    heatmap[x * 2 + x_add, y * 2 + y_add] = max_q
                     actionmap_plot[x * 2 + x_add, y * 2 + y_add] = actionmap[int(q_values[0].argmax())]
 
 
-    #print(heatmap)
-    #print(actionmap_plot)
-    #print(np.array([[symbolmap[action] for action in action_layer]for action_layer in actionmap_plot]))
     if plot:
         observation, _ = env.env.reset()
-        #env.env.unwrapped.agent_dir = 0
         observation = env.env.observation(observation)
         fig, (ax1, ax2) = plt.subplots(1,2,figsize=(16,8))
         ax1.imshow(observation['image'])
@@ -100,22 +90,9 @@ def plot_heatMap(pop, env, actionmap, batch_size=32, plot = True, save_path = ""
         for j in range(grid_size_width + 1):
             b, t = plt.xlim()
             ax2.hlines(y = (j) * 2, xmin = b, xmax = t, lw = 1, colors = 'black')
-#        fig.colorbar(ax2)
         
         fig.savefig(save_path)
         #plt.show()
-
-    # # Restore original position and direction
-    # env.env.unwrapped.agent_pos = np.array(orig_pos)
-    # env.env.unwrapped.agent_dir = orig_dir
-    # plt.figure(figsize=(6, 5))
-    # plt.imshow(heatmap, origin='lower', cmap='viridis')
-    # plt.colorbar(label='Max Q-value')
-    # plt.title("title")
-    # plt.xlabel('X')
-    # plt.ylabel('Y')
-    # plt.tight_layout()
-    # plt.show()
 
 def train(pop, budget, plot, position, max):
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
@@ -131,7 +108,6 @@ def train(pop, budget, plot, position, max):
     for episode in range(budget):
         
         observation = env.reset()
-        #print(f"Episode {episode} - Initial Observation stats: mean={observation.mean():.4f}, std={observation.std():.4f}, shape={observation.shape}")
         state = observation / 255.0  # Normalize the state
         done = False
         steps = 0
@@ -141,11 +117,9 @@ def train(pop, budget, plot, position, max):
             next_observation, reward, done, truncated, _ = env.step(action)
             next_state = next_observation / 255.0  # Normalize the next state
             agent.remember(state, action, reward, next_state, done)
-            #print(reward)
             loss = 0
             if len(agent.memory) > agent.batch_size:    
                 loss = agent.train()
-                #print(loss)
                 if loss > 0:
                     metrics.update_loss(loss_type='rl', loss=loss)
                     
@@ -159,9 +133,6 @@ def train(pop, budget, plot, position, max):
 
         if episode % 20 == 0:
             avg_reward = metrics.get_average_return(20)
-            #print(f"Episode {episode}, Average Reward: {avg_reward:.2f}, Total Rewards: {total_reward:.2f}, done: {done}, Steps: {steps}")
-            #if round(avg_reward,2) == 0.00:
-                #break
         # Decay epsilon
         if agent.epsilon > agent.epsilon_min:
             agent.epsilon *= agent.epsilon_decay
@@ -241,10 +212,13 @@ if __name__ == '__main__':
         population = [exp.run_experiment(pop['config'],pop['agent'],pop['metrics'],2**n * 50,pop['memory_bank']) for position, pop in enumerate(population)]
         population.sort(key=getreward, reverse=True)
         if n < budget - 1:
+            # half the population size wile dobeling butget
             population = [pop if pop['avg_reward'] > 0.00 else create_agent(create_dict(budget)) for pop in population[0:len(population)/2]]
     plot_heatMap(pop = {'agent': population[0]['agent']}, env = MiniGridWrapper(population[0]['config']['env_name'], seed= 42), actionmap=population[0]['config']['actionmap'])
     result_dir = f"results/{population[0]['config']['name']}"
     population[0]['metrics'].plot_metrics(save_path=f"{result_dir}/metrics.png")
+    
+    
     # 0,1,2,3,4 ,5 ,6 ,7
     # 1,2,4,8,16,32,64,128
     # best = []

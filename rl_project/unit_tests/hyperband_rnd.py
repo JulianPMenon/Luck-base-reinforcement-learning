@@ -16,7 +16,7 @@ def create_rnd_config(rl_episodes):
     feature_dim = int(np.random.choice([64, 128, 192]))
 
     return {
-        'name': "easy_task_rnd",
+        'name': "easy_task",
         'env_name': "MiniGrid-Empty-8x8-v0",
         'rl_episodes': rl_episodes,
         'max_steps_per_episode': 300,

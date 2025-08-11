@@ -195,7 +195,7 @@ if __name__ == "__main__":
     config = load_config('rl_project/experiments/configs/moderate_task_lava_gap.yaml')
     result_dir = f"results/{config['name']}/contrastiv"
     with open(result_dir+"/results.txt", 'a') as f:
-        for seed in range(1):
+        for seed in range(10):
             print(seed)
             # set seed globaly
             torch.manual_seed(seed)

@@ -45,7 +45,12 @@ If you run it uses our experiment results to calculate t and p values.
 python rl_project/utils/t_test.py
 ```
 
+You can try our hyperband (Whis is a little wonky)
 
+```bash
+python rl_project/unit_tests/hyperband.py
+```
+(Its in unit_tests because it was a test for different parameters first and then became a full Hyperband)
 ## Results
 
 You can find our results for the 10 seeds per approach in `results/easy_task` or `results/moderate_task` (which is now referred as hard task in the paper)

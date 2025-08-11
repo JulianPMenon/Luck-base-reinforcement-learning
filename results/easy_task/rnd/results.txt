@@ -1,13 +1,10 @@
-seed: 0 | avg_reward: 0.30627476822089506
-seed: 0 | avg_reward: 0.24027302748340074
-seed: 0 | avg_reward: 0.24750554603296074 | best_avg_reward: 0.6725918582775647 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 0 | avg_reward: 0.23779348189594426 | best_avg_reward: 0.31202193986942645 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 1 | avg_reward: 0.24004511444579257 | best_avg_reward: 0.39514171579485396 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 2 | avg_reward: 0.3133896427278629 | best_avg_reward: 0.3133896427278629 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 3 | avg_reward: 0.2728656328904561 | best_avg_reward: 0.3604817682265935 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 4 | avg_reward: 0.23946629978916867 | best_avg_reward: 0.31564658933887385 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 5 | avg_reward: 0.2737642300514345 | best_avg_reward: 0.3447082349494007 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 6 | avg_reward: 0.2305061593762135 | best_avg_reward: 0.34589286399250674 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 7 | avg_reward: 0.24322589445759893 | best_avg_reward: 0.329363270691932 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 8 | avg_reward: 0.22037970671166934 | best_avg_reward: 0.31602336240424 | best_weights: results/easy_task_rnd/best_weights.pth
-seed: 9 | avg_reward: 0.25371741118980123 | best_avg_reward: 0.31776879749098547 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 0 | avg_reward: 0.2396349646943761 | best_avg_reward: 0.3303120712881295 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 1 | avg_reward: 0.2662252840016728 | best_avg_reward: 0.321955185021822 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 2 | avg_reward: 0.2649387269057368 | best_avg_reward: 0.293153796097857 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 3 | avg_reward: 0.24308307388208886 | best_avg_reward: 0.3148656880099485 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 4 | avg_reward: 0.23812030961438574 | best_avg_reward: 0.5197415465489542 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 5 | avg_reward: 0.26745018149904526 | best_avg_reward: 0.32743105066980277 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 6 | avg_reward: 0.2393950743865208 | best_avg_reward: 0.31249930440568585 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 7 | avg_reward: 0.20102883111524128 | best_avg_reward: 0.33574875852922487 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 8 | avg_reward: 0.22582251730892733 | best_avg_reward: 0.2656215504065652 | best_weights: results/easy_task_rnd/best_weights.pth
+seed: 9 | avg_reward: 0.27720603341820743 | best_avg_reward: 0.3337078812819584 | best_weights: results/easy_task_rnd/best_weights.pth

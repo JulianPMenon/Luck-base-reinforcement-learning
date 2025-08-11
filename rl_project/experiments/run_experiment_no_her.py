@@ -151,7 +151,7 @@ if __name__ == "__main__":
     os.makedirs(result_dir, exist_ok=True)
     with open(result_dir+"/results.txt", 'a') as f:
         # coose seeds
-        for seed in range(1):
+        for seed in range(10):
             print(seed)
             # set seed globaly
             torch.manual_seed(seed)

@@ -18,14 +18,17 @@ def load_config(config_path):
         return yaml.safe_load(f)
     
 def generate_memorybank(config, contrastiv_rl_agent:Contrastiv_RL_agent):
+    """
+    collects and augments data. trains encoder and generates the memorybank
+    """
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
     print(f"Running experiment: {config['name']}")
     
     
-    # 1. Initialize environment
+    #create environment
     env = MiniGridWrapper(config['env_name'], seed= 42)
     
-    # 2. Collect data for contrastive learning
+    #collect data for training
     print("                                           |   mmm   |\n"
           "Collecting data for contrastive learning...|  (@_@)  |\n"
           "                                           | <( : )> |\n"
@@ -38,33 +41,23 @@ def generate_memorybank(config, contrastiv_rl_agent:Contrastiv_RL_agent):
     queries = queries.to(device)
     keys = keys.to(device)
     
-    # 3. Initialize contrastive model
+    # set agent to device
     state_dim = config['latent_dim']  # Use latent representation
     action_dim = len(config['actionmap'])
     contrastiv_rl_agent.to(device)
-    # contrastive_model = ContrastiveLearningAgent(
-    #     input_channels=3,  # Assuming RGB images
-    #     latent_dim=config['latent_dim']
-    # )
     
-    # 4. Train contrastive model
+    # Train contrastive model
     print("                                           |   mmm   |\n"
           "Training contrastive model...              |  (O.O)  |\n"
           "                                           | <( : )> |\n"
           "                                           |   / \   |\n"
           )
-    #contrastive_trainer = ContrastiveTrainer(contrastive_model)
     contrastive_losses = contrastiv_rl_agent.train_contrastive_model(
         queries, keys, 
         epochs=config['contrastive_epochs']
     )
     
-    # 5. Initialize RL agent
-    # state_dim = config['latent_dim']  # Use latent representation
-    # action_dim = env.action_space.n
-    # agent = RLAgent(state_dim, action_dim)
-    
-    # 6. Build memory bank for entropy estimation
+    # Build memory bank for entropy estimation
     print("                                           |  Bank  |\n"
           "Building memory bank...                    |        |\n"
           "                                           |   __   |\n"
@@ -80,22 +73,26 @@ def generate_memorybank(config, contrastiv_rl_agent:Contrastiv_RL_agent):
     return memory_bank
 
 def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metrics,max_episodes:int=0, memory_bank=[]):
+    """
+    runs training for fixed agent and episodes
+    """
     device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
     print(f"Running experiment: {config['name']}, {config['epsilon']}, {config['epsilon_decay']}, {config['gamma']}")
     env = MiniGridWrapper(config['env_name'], seed= 42)
     contrastiv_rl_agent.to(device)
+
+    # initialize memorybank
     if memory_bank == []:
         memory_bank = generate_memorybank(config=config,contrastiv_rl_agent=contrastiv_rl_agent)
     
-    hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
-    
+    # remember best config    
     best_agent = copy.deepcopy(contrastiv_rl_agent)
     best_avg_reward = 0
     best_epoch = 0
     best_epsilon = 0
 
 
-    # 7. Training
+    # Training
     print("Training RL agent with intrinsic rewards...")
     avg_reward = 0
     optimizer = optim.Adam(contrastiv_rl_agent.rl_agent.q_network.parameters(), lr=0.00001)
@@ -112,22 +109,19 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
         episode_transitions = []  # For HER
         done = False
         lastloss=-1
+        # run one game
         while not done and steps < config['max_steps_per_episode']:
             with torch.no_grad():
                 state_encoding = contrastiv_rl_agent.query_encoder(obs.unsqueeze(0))
                 visited_states.append(state_encoding.squeeze())
-            #print(f"state encoding: {state_encoding.squeeze().shape}")
             action = contrastiv_rl_agent.act(state_encoding.squeeze())
 
             next_obs, reward, terminated, truncated, _ = env.step(config['actionmap'][action])
             done = terminated or truncated
-            # if reward != 0:
-            #     print(f"  Step {steps} | Reward: {reward:.2f} | Epoch: {episode}")
             with torch.no_grad():
                 intrinsic_reward = contrastiv_rl_agent.compute_state_entropy(
                     next_obs.unsqueeze(0), memory_bank
                 ).item()
-
             with torch.no_grad():
                 next_state_encoding = contrastiv_rl_agent.query_encoder(next_obs.unsqueeze(0))
 
@@ -177,7 +171,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
 
         metrics.update_episode(total_reward, steps, visited_states)
 
-        if episode % 10 == 0:
+        if episode % 50 == 0:
             avg_reward = metrics.get_average_return()
             exploration_efficiency = metrics.get_exploration_efficiency()
             print(f"Episode {episode}: Total Reward: {total_reward}, "
@@ -185,7 +179,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
                   f"Exploration Efficiency: {exploration_efficiency:.2f},"
                   f"Last loss = {lastloss}")
             hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
-            if avg_reward > best_avg_reward:
+            if avg_reward > best_avg_reward and episode != 0:
                 best_avg_reward = avg_reward
                 best_agent = copy.deepcopy(contrastiv_rl_agent)
                 best_epoch = episode
@@ -194,12 +188,8 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
     # 8. Evaluation
     result_dir = f"results/{config['name']}"
     os.makedirs(result_dir, exist_ok=True)
-    #metrics.plot_metrics(save_path=f"{result_dir}/metrics.png")
-    #torch.save(contrastiv_rl_agent.contrastive_model.state_dict(), f"{result_dir}/contrastive_model.pth")
-    #torch.save(contrastiv_rl_agent.rl_agent.state_dict(), f"{result_dir}/rl_agent.pth")
     print(f"Experiment {config['name']} completed. Results saved to {result_dir}")
-    #hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'])
-    return {'agent':best_agent, 'config':config, 'avg_reward':best_avg_reward, 'memory_bank':memory_bank, 'metrics':metrics, 'epoch':best_epoch, 'epsilon':best_epsilon}
+    return {'agent':best_agent, 'config':config, 'avg_reward':avg_reward, 'best_avg_reward':best_avg_reward, 'memory_bank':memory_bank, 'metrics':metrics, 'epoch':best_epoch, 'epsilon':best_epsilon}
 
 if __name__ == "__main__":
     config = load_config('rl_project/experiments/configs/moderate_task_lava_gap.yaml')
@@ -207,16 +197,20 @@ if __name__ == "__main__":
     with open(result_dir+"/results.txt", 'a') as f:
         for seed in range(1):
             print(seed)
+            # set seed globaly
             torch.manual_seed(seed)
             state_dim = config['latent_dim']  # Use latent representation
             action_dim = len(config['actionmap']) 
             contrastiv_rl_agent = Contrastiv_RL_agent(state_dim, action_dim, input_channels=3,latent_dim=config['latent_dim'], epsilon= config['epsilon'], epsilon_decay=config['epsilon_decay'], gamma = config['gamma'])
             metrics = MetricsTracker()
+            
             population = run_experiment(config,contrastiv_rl_agent=contrastiv_rl_agent, metrics=metrics)
+            
+            # save best config parameters
             hyperband.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
             population['metrics'].plot_metrics(save_path=f"{result_dir}/metrics_{seed}_.png")
-            print(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['avg_reward']} | len(memory_bank): {len(population['memory_bank'])}")
-            f.write(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['avg_reward']} | len(memory_bank): {len(population['memory_bank'])}\n")
+            print(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['best_avg_reward']} | len(memory_bank): {len(population['memory_bank'])}")
+            f.write(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['best_avg_reward']} | len(memory_bank): {len(population['memory_bank'])}\n")
             torch.save(contrastiv_rl_agent.contrastive_model.state_dict(), f"{result_dir}/contrastive_model_{seed}.pth")
             torch.save(contrastiv_rl_agent.rl_agent.state_dict(), f"{result_dir}/rl_agent_{seed}.pth")
             

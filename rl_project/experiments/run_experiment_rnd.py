@@ -12,7 +12,7 @@ from src.utils.metrics import MetricsTracker
 from src.models.rnd_ import RND
 import torch.optim as optim
 import torch.nn.functional as F
-from unit_tests import random_search
+from unit_tests import hyperband
 
 def load_config(config_path):
     with open(config_path, 'r') as f:
@@ -77,10 +77,10 @@ def run_experiment_rnd(config, metrics, lr , agent, max_episodes=0):
             if avg_reward > best_avg_reward:
                 best_avg_reward = avg_reward
                 best_weights = copy.deepcopy(rnd.state_dict())
-                best_weights_path = f"results/{config['name']}_rnd/best_weights.pth"
+                best_weights_path = f"results/{config['name']}/best_weights.pth"
                 torch.save(best_weights, best_weights_path)
     
-    result_dir = f"results/{config['name']}_rnd"
+    result_dir = f"results/{config['name']}"
     os.makedirs(result_dir, exist_ok=True)
     metrics.plot_metrics(save_path=f"{result_dir}/metrics.png")
     torch.save(rnd.predictor_network.state_dict(), f"{result_dir}/rnd_predictor.pth")
@@ -96,7 +96,7 @@ def run_experiment_rnd(config, metrics, lr , agent, max_episodes=0):
     }
 
 if __name__ == "__main__":
-    config = load_config('rl_project/experiments/configs/moderate_task.yaml')
+    config = load_config('rl_project/experiments/configs/moderate_task_lava_gap.yaml')
     result_dir = f"results/{config['name']}/rnd"
     with open(result_dir+"/results.txt", 'a') as f:
         for seed in range(10):
@@ -106,7 +106,7 @@ if __name__ == "__main__":
             rnd = RND(input_channels=3, feature_dim=feature_dim).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
             metrics = MetricsTracker()
             population = run_experiment_rnd(config,agent=rnd, metrics=metrics, lr=0.00015, max_episodes=400)
-            #random_search.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
+            #hyperband.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
             population['metrics'].plot_metrics(save_path=f"{result_dir}/metrics_{seed}_.png")
             print(f"seed: {seed} | avg_reward: {population['avg_reward']} | best_avg_reward: {population['best_avg_reward']} | best_weights: {population['best_weights_path']}")
             f.write(f"seed: {seed} | avg_reward: {population['avg_reward']} | best_avg_reward: {population['best_avg_reward']} | best_weights: {population['best_weights_path']}\n")

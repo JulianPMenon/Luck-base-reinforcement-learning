@@ -9,7 +9,7 @@ from src.environments.minigrid_wrapper import MiniGridWrapper
 from src.utils.data_collection import DataCollector
 from src.utils.metrics import MetricsTracker
 from src.models.contrastiv_rl_agent import Contrastiv_RL_agent
-from unit_tests import random_search
+from unit_tests import hyperband
 import torch.optim as optim
 
 def load_config(config_path):
@@ -87,7 +87,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
     if memory_bank == []:
         memory_bank = generate_memorybank(config=config,contrastiv_rl_agent=contrastiv_rl_agent)
     
-    random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
+    hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
     
     best_agent = copy.deepcopy(contrastiv_rl_agent)
     best_avg_reward = 0
@@ -184,7 +184,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
                   f"Avg Reward: {avg_reward:.2f}, "
                   f"Exploration Efficiency: {exploration_efficiency:.2f},"
                   f"Last loss = {lastloss}")
-            random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
+            hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'], plot=False)
             if avg_reward > best_avg_reward:
                 best_avg_reward = avg_reward
                 best_agent = copy.deepcopy(contrastiv_rl_agent)
@@ -198,7 +198,7 @@ def run_experiment(config: dict, contrastiv_rl_agent:Contrastiv_RL_agent, metric
     #torch.save(contrastiv_rl_agent.contrastive_model.state_dict(), f"{result_dir}/contrastive_model.pth")
     #torch.save(contrastiv_rl_agent.rl_agent.state_dict(), f"{result_dir}/rl_agent.pth")
     print(f"Experiment {config['name']} completed. Results saved to {result_dir}")
-    #random_search.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'])
+    #hyperband.plot_heatMap(pop = {'agent': contrastiv_rl_agent}, env = env, actionmap=config['actionmap'])
     return {'agent':best_agent, 'config':config, 'avg_reward':best_avg_reward, 'memory_bank':memory_bank, 'metrics':metrics, 'epoch':best_epoch, 'epsilon':best_epsilon}
 
 if __name__ == "__main__":
@@ -213,7 +213,7 @@ if __name__ == "__main__":
             contrastiv_rl_agent = Contrastiv_RL_agent(state_dim, action_dim, input_channels=3,latent_dim=config['latent_dim'], epsilon= config['epsilon'], epsilon_decay=config['epsilon_decay'], gamma = config['gamma'])
             metrics = MetricsTracker()
             population = run_experiment(config,contrastiv_rl_agent=contrastiv_rl_agent, metrics=metrics)
-            random_search.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
+            hyperband.plot_heatMap(pop = {'agent': population['agent']}, env = MiniGridWrapper(population['config']['env_name'], seed= 42), actionmap=population['config']['actionmap'],save_path=f"{result_dir}/heat_map_{seed}_.png")
             population['metrics'].plot_metrics(save_path=f"{result_dir}/metrics_{seed}_.png")
             print(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['avg_reward']} | len(memory_bank): {len(population['memory_bank'])}")
             f.write(f"seed: {seed} | epoch: {population['epoch']} | epsilon: {population['epsilon']} | avg_reward: {population['avg_reward']} | len(memory_bank): {len(population['memory_bank'])}\n")

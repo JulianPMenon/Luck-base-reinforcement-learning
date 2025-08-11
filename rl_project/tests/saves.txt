@@ -1,0 +1,874 @@
+Hyperband RND | Budget: 50 | 1 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006878362977943198, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.15641994461658015, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00015596211861179654, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00012421913772442394, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.8708765727999435e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.248059326452449e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+/home/julian/repositories/Luck-base-reinforcement-learning/rl_project/src/utils/metrics.py:75: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  axes[1, 0].legend()
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 2 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.7537186706703778, Avg Reward: 0.75, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.00018309458570797688, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001332095036161718, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00012034134091010174, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00010232987185787579, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.0888300913977105e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 3 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.009974907598746086, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00015260106803083318, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00012331609526761156, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 9.317482929205312e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00011969826202573586, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.953147820925153e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 4 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.0059013275551933475, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0002093119979758029, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00016576551962543817, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.990292765924778e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.10357866940489835, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 9.24679789697791e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 5 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.005822190281833173, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0001294968294196508, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.46216994876946693, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 5.21586966559795e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.016641188326787e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 2.8585039927087053e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 6 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.7589995484349856, Avg Reward: 0.76, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.00014399011394772288, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00012327131134526326, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00011464611750611198, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 8.695935563274304e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.936738883642988e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 7 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.00600454921243454, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.6098359551919031, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00010109741814900985, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 8.734448072544865e-05, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00016013567254447025, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.1854829251342096e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 8 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.5029816316473897, Avg Reward: 0.50, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.5290371060469155, Avg Reward: 0.26, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00016609853196314361, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00010612653969133135, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 8.306407272939964e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.3144898346589873, Avg Reward: 0.17, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 9 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.011531858506145909, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0003061273814211063, Avg Reward: 0.05, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.14236960932361742, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00023122488951798914, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 7.725432219984896e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 9.999593025611375e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 10 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006501722173425151, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00020489685920921374, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5219837032597695, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.003456565612964e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 8.916752483134616e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.6871336842093938, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 11 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.007518042903427613, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.46229020462009196, Avg Reward: 0.27, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00025301266273913825, Avg Reward: 0.23, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00014058805172822986, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.7222946911761681, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 7.704724557910936e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 12 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.8630982883760225, Avg Reward: 0.86, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.00013975815188871366, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00014834080129233485, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.12818956073679033, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.26879147216883503, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 1.7341111477275906e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 13 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006064205409700207, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00013267884624923454, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 9.028472829797352e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.19499410790354121, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.1332545730531365e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 3.1238971069491583e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 14 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.4774556513254993, Avg Reward: 0.48, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.24773549302784803, Avg Reward: 0.23, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5886998723778631, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.1281769729644654, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 3.9305168447967276e-05, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.34962828795777856, Avg Reward: 0.20, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 15 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.3584206329240601, Avg Reward: 0.36, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00015010778179913586, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.595764225496417, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.196491563377094e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 6.553997308067494e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.709149868948771e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 16 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.5324812264741468, Avg Reward: 0.53, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.0002130102582782456, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5044160493267839, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00010691167906529131, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.12820802397208475, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.31802425645997234, Avg Reward: 0.18, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 17 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.3971086416524826, Avg Reward: 0.40, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.7117732846793501, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 6.693942660263019e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 3.9003124747694073e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.2955644983688757e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.834252780927528e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 18 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.0061422857969546385, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.16691529415608808, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 7.219847458372897e-05, Avg Reward: 0.06, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 5.666575090046422e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.556573301428557e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 3.247936374783933e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 19 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.009540359616266869, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.286585288100457, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00015573784236266874, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.0001089106349709823, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 8.394956213564342e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.396177515100021e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 20 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.007060268075974818, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00016680699170024127, Avg Reward: 0.03, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 8.672360718264827e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.397821098464874e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 3.668201045492481e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.656683689319152e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 21 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.49167672652934014, Avg Reward: 0.49, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00022839314758726914, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001010794135183346, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 8.21784422235794e-05, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.3993514498529294e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.126976103346891e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+/home/julian/repositories/Luck-base-reinforcement-learning/rl_project/src/utils/metrics.py:53: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 22 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006718500816418782, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.4341541810425781, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.6555292515501805, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00013895543774822272, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 6.996058415609241e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 9.069985812715231e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 23 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.009663626079827736, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.2091791981445965, Avg Reward: 0.02, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00013462935262964493, Avg Reward: 0.05, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.4973488196974386, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 7.121304532287098e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 3.793136677465725e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 24 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.005642603966464321, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.1775031548584366, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00014924617737932522, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00010736858197191168, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.8272870649744846e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.5103721411976494e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 25 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.004898150196765982, Avg Reward: 0.00, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00010299324142692967, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.4129369658626032, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.4516001086317928, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.52541629438592, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 2.8940488721929114e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 26 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.2590641916383901, Avg Reward: 0.26, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00016633199465587722, Avg Reward: 0.02, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 7.430758721493902e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.6062987534343349, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.6976808152292072, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.3074832609154228, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 27 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.005086949329495383, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00012761096287050577, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00013854189770512448, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.48675665521681066, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.5532496585186664e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.7890746795761174, Avg Reward: 0.17, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 28 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.007166104568227638, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.000181600829264994, Avg Reward: 0.04, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00014871211466527257, Avg Reward: 0.05, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 9.389584374375204e-05, Avg Reward: 0.07, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.010715903923767e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.410223898356548e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 29 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006791149042896905, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00016597489175751434, Avg Reward: 0.03, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00012649155755184438, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.15632890313395897, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.726016424922875e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.5500297974944452, Avg Reward: 0.10, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 30 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006023463357308856, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.30407911761124773, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00016389403974415018, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 6.15537005073108e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.6519813044612355, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.2371536090908284, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 31 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006213372884303681, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00010856441556228447, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 8.35786738848654e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 4.430061062254964e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 6.078079639237899e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.6308735722789933, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 50 | 32 of 32
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.008324307949465037, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00024173438620778143, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001295881678018418, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.25125721047985927, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.6344605050540806, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.5324704368562501, Avg Reward: 0.18, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 1 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.008624737825414286, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.673137805847847, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00010451890068630121, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00012008447562550373, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 7.947253164886092e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.6449541016213288, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.433290024152825e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 3.9458716440066155e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 2.6934079384588472e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.512551931082129e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.20548210375282994, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 2 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006930305658158886, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00018281542773834758, Avg Reward: 0.05, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5395279519942363, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00013294945243025325, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00010911130940627345, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.889625958983459e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.17114308826072e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 4.768021690537694e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.25119382012335933, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 6.476351288320359e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.6941462486837569, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 3 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.008126753854028834, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00018853981667632524, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.6379374506186608, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.3356159978571235, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.5462679622309e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.35668087526383296, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.596601043260762e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 4.901282840386045e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 3.739784731404683e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 2.5599001319376313e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.6554792620383634, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 4 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006458110577682419, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.10722761749713217, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00016290832469678662, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.4410693278211696, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.6765898305863416, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.926334862849103e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.672660413300832e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 1.9135944827386453e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 2.3018512107064737e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.6572625853639167e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.1785389828045112e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 5 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.5684149080474525, Avg Reward: 0.57, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00015258541328933006, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.3566962393738776, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 9.830719365666596e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.4726865593681886, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.1298362273067823e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 2.3090350353083267e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 1.903121967217203e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 2.5621878125381414e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.3813749944802112e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.5570353533290687, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 6 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.6095621437460976, Avg Reward: 0.61, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.3675063982217921, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0005610389270884752, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00011765810829089673, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.27939051440023377, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.7187922173491756, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 5.446406419817862e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.7082335744803345, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.18792982575952732, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 2.4371084812457866e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 3.496867259045189e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 7 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.013423399846260509, Avg Reward: 0.01, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.00032105042657804006, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.7223710301331265, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00011396291403897862, Avg Reward: 0.06, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.0002011650528928044, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.00011112566967597104, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.6801018191371838, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.6273642137716443, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 5.712138215940854e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.8101638254336493, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.5394721250014228, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 8 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.6725010305603973, Avg Reward: 0.67, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.00027973481998344596, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00015583570652211165, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00013660796002312736, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00011064012522155053, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.753647762280934e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.822009135541094e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.4129216959890776, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.3425948615296919, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.3968676822129211e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.1210393723537493e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 9 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.4364584054867009, Avg Reward: 0.44, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.7750491947467651, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00011918052162940285, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.010750945113386e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.9617440383897815e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.1598135090597289, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.145105843493923e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.0860809249345635e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 2.3197637594840614e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.8277377322890601, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 0.1422066961564049, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 10 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.004858510928897886, Avg Reward: 0.00, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00015571705802841507, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5078662984875706, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 4.8175748794676565e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.6096829413144746e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 1.947672922586463e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.7750071528368953, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.19845250476756948, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.7363350868041607, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.6065381025498482e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 3.601702863953449e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 11 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.5731580629205155, Avg Reward: 0.57, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.4797957910209646, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00016141264701730051, Avg Reward: 0.27, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.579686284131526e-05, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.70788086609042e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.623580091906888e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.2882661682952516e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.144170256723754e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.7328175805997098, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.6414152464721823, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.9206063126553374e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 12 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.004905400557731809, Avg Reward: 0.00, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.18456681137908215, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 9.789125572723378e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00015802815379117874, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.933596079721326e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.344266651758801e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.3707265428533436, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.18088248742129587, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 2.040817169213227e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 2.0864298640788093e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.2367157630976955e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 13 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.005360388490998957, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0001515456516898439, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 9.571894108617585e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.599277007217347, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 3.6018804205895094e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.6097820576708134, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.167251508529034e-05, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.352975607511354e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 1.7104225447539534e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.6589905690037303, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.743075346394285e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 14 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.004204054125750645, Avg Reward: 0.00, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00013828325561249244, Avg Reward: 0.03, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 4.123566419877989e-05, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.4234677431790065, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 2.7742843128564232e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 1.990243790928048e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 2.2632962436652804e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.28634510398145985, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.342591919571668, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.6343817095700675, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 9.817792992583563e-06, Avg Reward: 0.19, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 15 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.010668544118857426, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.1600920821586641, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.2021030175884675, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 9.806058725381206e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.13874800611178095, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.00016296139569682566, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.7895092794902894e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 3.4399933770856705e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 3.241103127438194e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.19494434314277298, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.4198755551374518e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 100 | 16 of 16
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.005889062458209082, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00015661580302150924, Avg Reward: 0.03, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.41304369491910786, Avg Reward: 0.07, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00012131957725003417, Avg Reward: 0.07, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.8692053567455105e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.5781463990048614, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.837526715917306e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 4.145168877744965e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.10355287815886705, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.3922809843247563e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.67850291461491e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 1 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.2672349971834137, Avg Reward: 0.27, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00020366291014539684, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0002540500091043896, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00021785300413057485, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 6.392339152938575e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.3812879135496686, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.3144989072035429, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.24769658268353345, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.48322031549996036, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 2.158396257812001e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.3656819664097384e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 2.416470364785539e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 8.780703485422592e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 1.0206821367098051e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 1.0723236205434361e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.6062590919799502, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.3672001730725989, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 9.842914393765057e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 4.366960392743202e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 9.80070683809231e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 6.2139998399102225e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 2 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.004425146043928407, Avg Reward: 0.00, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.7855937516971977, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 7.427753489608335e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 6.945047729978171e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 4.630599197774643e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 3.0093786230089847e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.5650080123517114e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.1854054732539652e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.10002107421306439, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.694151351896436, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.520204831706451e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 5.74597116931308e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.2848741086646243e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 0.18087123517338732, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 3.4239591412132953e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.35664833698350373, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.14922279087247325, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 3.751765050047373e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 0.48320494719697604, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.8312508395462281, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 0.1386761785992845, Avg Reward: 0.18, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 3 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006362386259922914, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00017032350719148326, Avg Reward: 0.07, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.5008322377599093, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 7.028712845169593e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 5.8434877104218685e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 4.4135751327445405e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 5.203328510283711e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.31447733034291936, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.33908138013152345, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.4113111176605742e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.206393616610569e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 0.18087149958234428, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.2217637843203732e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 1.0867487477472793e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 0.42344397516273624, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 8.601364350213636e-06, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 7.94027370076833e-06, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 3.163830312735705e-06, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 4.670900803804834e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 6.381915394149118e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 0.7152382610011555, Avg Reward: 0.13, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 4 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.006649231081496509, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.3216196843438822, Avg Reward: 0.05, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001688887398287875, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00012826234952356685, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.6554987318893535, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.521946186455127, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 5.421486100765094e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.4515804089537484, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.6132931654488782, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.355756837462252e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.3585079476085014e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 1.3548302071342277e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.3641387307083974e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 0.21954516054160744, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 0.35664856960513014, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 1.963888500622346e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.31797694893981043, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 6.825716733771525e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 1.0141810977692955e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 7.698807519274098e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 0.43398763977560334, Avg Reward: 0.15, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 5 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.0075036311241092335, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00023621571326515323, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001267143858463271, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00011718430388008017, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.4340218787568574, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.1250995629636975e-05, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.37425201266378416, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 3.0063332482122007e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.7363371765125031, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.8418010099543274, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.4706974488909452e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 1.0401672604132273e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.1604460549152762e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 7.788903995997742e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 1.0333159911279921e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.3074280493494339, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.7011744086784502, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 7.957002313929706e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 8.458490416973774e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 6.636699920958833e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 6.106980386721972e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 6 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.6086342780470659, Avg Reward: 0.61, Avg RND Loss: 0.0001
+[RND] Episode 10: Total Reward: 0.3884886366486683, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00017645396241050548, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.5500566689250725, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 6.766018831072529e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 6.682596363738469e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.9413951075317755e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.380853296735097e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 3.193915997279362e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.942467851101526e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.3064059153578e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 0.370709310591654, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 0.5394622962130912, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 6.609286910430612e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 6.448678406711927e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.1773515928171464, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 1.647157052087067e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 5.124033862102806e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 6.436061287140582e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.6589894514254533, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 8.912418130169186e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 7 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.12844793758665674, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0002234654923256585, Avg Reward: 0.04, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00011420636485937052, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.00010112479551338538, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.7328356840415807, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.440032445669374e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.8869489484459905e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 0.39884927295008976, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.620329971073992, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 2.6697455106194923e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.7778640401265875e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 0.7820359135537365, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.2371230710073178e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 0.3179753769596748, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 1.0010876679622527e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.4761818372075354, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 1.0916145165906777e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 1.5457602658863756e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 7.031725621331475e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 4.75541558411785e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 0.3742247360115619, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 200 | 8 of 8
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.00598819874238643, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0001647753575255706, Avg Reward: 0.04, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.000164609873451127, Avg Reward: 0.02, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 6.646351123329453e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 7.607536037568252e-05, Avg Reward: 0.09, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 2.9887334151545986e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 3.69684757761668e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.0891593061289626e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 1.7560872321631393e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 1.738905060610918e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.6665223004252994e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 1.8842859193846095e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 1.1351756423749748e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 6.974047704666475e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 6.351580592811601e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 1.1545258027823024e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 7.505720680756056e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 5.259814576552557e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 4.301837052134161e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.23711579685384687, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 0.43750447085579314, Avg Reward: 0.16, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 400 | 1 of 4
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.1630146648549271, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.0001791702166897835, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.6625607813588829, Avg Reward: 0.23, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 9.622770733841435e-05, Avg Reward: 0.23, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.8207280025076166, Avg Reward: 0.28, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 5.880679265146682e-05, Avg Reward: 0.24, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.183857890538434e-05, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 3.1838102415804315e-05, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.3777680953409799, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.4796995715825104, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.1024068168173926e-05, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 2.0984846138993873e-05, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 9.620350353234386e-06, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 1.2770362487479758e-05, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 1.0809162551028706e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 7.742556674905643e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.21953807453426077, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 6.3032920332162234e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 8.728979873584564e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.5359400447911626, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 1.4690779284620703e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 210: Total Reward: 4.2232616790371935e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 220: Total Reward: 5.006743914126588e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 230: Total Reward: 3.3782308995755628e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 240: Total Reward: 0.7750004620293675, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 250: Total Reward: 2.340993527694124e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 260: Total Reward: 5.144442262627891e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 270: Total Reward: 0.46914225160094547, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 280: Total Reward: 0.528908077898093, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 290: Total Reward: 3.9790016529428485e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 300: Total Reward: 2.6674279278715574e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 310: Total Reward: 0.782032132010426, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 320: Total Reward: 3.1933193949118532e-06, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 330: Total Reward: 0.27930069848417727, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 340: Total Reward: 3.0967647263735465e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 350: Total Reward: 1.8810219619136426e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 360: Total Reward: 5.545895500141951e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 370: Total Reward: 1.8284137629498431e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 380: Total Reward: 0.39179877763261123, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 390: Total Reward: 0.28633182050130446, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 400: Total Reward: 0.4093763939153212, Avg Reward: 0.12, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 400 | 2 of 4
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.460049487341621, Avg Reward: 0.46, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00011964678820319818, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 6.186842775601775e-05, Avg Reward: 0.08, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.2723331686121113, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 3.6135193213437944e-05, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 3.354334546123994e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 2.8534914747524454e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.272323082941341e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 1.6072045341708474e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 6.431640779402947e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.3572796623506633e-05, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 9.334147789363811e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 9.809548592532025e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 5.743182093675969e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 8.470340969957135e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.24063242288492537, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 3.092202613852457e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 6.961212869249778e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 2.7234802165709837e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.2863340391849484, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 2.5329297795306793e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 210: Total Reward: 0.6695330041570098, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 220: Total Reward: 3.4068970773404317e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 230: Total Reward: 2.97967476797778e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 240: Total Reward: 3.601861268687223e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 250: Total Reward: 1.9410665373503777e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 260: Total Reward: 0.29336194954860095, Avg Reward: 0.10, Avg RND Loss: 0.0000
+[RND] Episode 270: Total Reward: 0.2476586854486259, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 280: Total Reward: 0.1281283349586534, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 290: Total Reward: 0.7257818281622685, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 300: Total Reward: 0.49023627354351973, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 310: Total Reward: 0.433985577615856, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 320: Total Reward: 0.4339848297165573, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 330: Total Reward: 1.9498594391320623e-06, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 340: Total Reward: 1.5769595027581573e-06, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 350: Total Reward: 1.6885116274067968e-06, Avg Reward: 0.22, Avg RND Loss: 0.0000
+[RND] Episode 360: Total Reward: 0.7187506897962487, Avg Reward: 0.24, Avg RND Loss: 0.0000
+[RND] Episode 370: Total Reward: 1.6539291299855208e-06, Avg Reward: 0.21, Avg RND Loss: 0.0000
+[RND] Episode 380: Total Reward: 2.3314250825745564e-06, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 390: Total Reward: 0.3847666259546186, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 400: Total Reward: 1.3703858898206356e-06, Avg Reward: 0.20, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 400 | 3 of 4
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.010489386624385588, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.3498616474698366, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.0001622916695538379, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.0001644176706570022, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.3040067449676257, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 0.5359762103160264, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 0.8031386974560902, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 2.0716614142823886e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 0.4867539147743848, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 3.844432555766275e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 2.4987106054696895e-05, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 0.10705472439783359, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 0.1351804699676723, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 2.2608314047545264e-05, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 2.102716674201588e-05, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.5464927965646731, Avg Reward: 0.19, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 1.1486417003214733e-05, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 0.7960959803847534, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 0.74687735188394, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 0.35313622811813794, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 1.6148269884830313e-05, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 210: Total Reward: 5.431828132174132e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 220: Total Reward: 8.503017018490766e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 230: Total Reward: 0.3988330485503354, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 240: Total Reward: 1.1837808025827457e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 250: Total Reward: 6.977965947396747e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 260: Total Reward: 7.076352273482911e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 270: Total Reward: 1.0810883123379966e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 280: Total Reward: 6.22012811124506e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 290: Total Reward: 5.190968253909745e-06, Avg Reward: 0.11, Avg RND Loss: 0.0000
+[RND] Episode 300: Total Reward: 2.8343434365085685e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 310: Total Reward: 6.084686292373576e-06, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 320: Total Reward: 4.6214146254275335e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 330: Total Reward: 4.527105821883204e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 340: Total Reward: 0.14570756698769605, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 350: Total Reward: 5.143783001759772e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 360: Total Reward: 0.2265667362612056, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 370: Total Reward: 0.5570334185237674, Avg Reward: 0.17, Avg RND Loss: 0.0000
+[RND] Episode 380: Total Reward: 5.389467924610258e-06, Avg Reward: 0.18, Avg RND Loss: 0.0000
+[RND] Episode 390: Total Reward: 4.991663620224074e-06, Avg Reward: 0.20, Avg RND Loss: 0.0000
+[RND] Episode 400: Total Reward: 5.583437137524072e-06, Avg Reward: 0.19, Avg RND Loss: 0.0000
+RND baseline completed. Results saved to results/easy_task_rnd_rnd
+Hyperband RND | Budget: 400 | 4 of 4
+Running RND baseline: easy_task_rnd
+[RND] Episode 0: Total Reward: 0.011012603021526957, Avg Reward: 0.01, Avg RND Loss: 0.0000
+[RND] Episode 10: Total Reward: 0.00018401958318747802, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 20: Total Reward: 0.00017247755388893893, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 30: Total Reward: 0.1669455665661601, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 40: Total Reward: 0.00011726572981451966, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 50: Total Reward: 9.648121496041995e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 60: Total Reward: 4.192073024533727e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 70: Total Reward: 4.73709332453609e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 80: Total Reward: 3.8257672859032255e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 90: Total Reward: 0.6519653320808625, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 100: Total Reward: 1.7700105030549196e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 110: Total Reward: 0.7996137852246921, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 120: Total Reward: 0.48321266156363696, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 130: Total Reward: 3.173363727171363e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 140: Total Reward: 1.2886590273986087e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 150: Total Reward: 0.3496238506324243, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 160: Total Reward: 0.15274732791464174, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 170: Total Reward: 1.90358189167128e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 180: Total Reward: 1.2415397290466146e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 190: Total Reward: 1.3685389631312717e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 200: Total Reward: 1.0589723176357424e-05, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 210: Total Reward: 1.1349752839340255e-05, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 220: Total Reward: 7.218215069659806e-06, Avg Reward: 0.13, Avg RND Loss: 0.0000
+[RND] Episode 230: Total Reward: 0.31094331854044366, Avg Reward: 0.12, Avg RND Loss: 0.0000
+[RND] Episode 240: Total Reward: 1.2811010671409662e-05, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 250: Total Reward: 7.982191291944218e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 260: Total Reward: 9.55996338580789e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 270: Total Reward: 8.493527519748412e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 280: Total Reward: 8.912733529431449e-06, Avg Reward: 0.14, Avg RND Loss: 0.0000
+[RND] Episode 290: Total Reward: 6.9157304780631534e-06, Avg Reward: 0.15, Avg RND Loss: 0.0000
+[RND] Episode 300: Total Reward: 6.56431675927216e-06, Avg Reward: 0.16, Avg RND Loss: 0.0000
+[RND] Episode 310: Total Reward: 1.2558014252483929e-05, Avg Reward: 0.15, Avg RND Loss: 0.0000

@@ -1,0 +1,1028 @@
+Running experiment: moderate_task_lava_gap, 0.11234724521636963, 0.9846543073654175, 0.24170821905136108
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+152
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 152
+Batch size: 32
+Batches per epoch: 4
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.9117
+Epoch 10/100, Loss: 1.6143
+Epoch 20/100, Loss: 1.2829
+Epoch 30/100, Loss: 1.1612
+Epoch 40/100, Loss: 1.0446
+Epoch 50/100, Loss: 0.9612
+Epoch 60/100, Loss: 0.8353
+Epoch 70/100, Loss: 0.8276
+Epoch 80/100, Loss: 0.8192
+Epoch 90/100, Loss: 0.7902
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.01975996233522892
+Episode 50: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.09733650833368301
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.7262365221977234, 0.9298920035362244, 0.2038237452507019
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+365
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 365
+Batch size: 32
+Batches per epoch: 11
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.8131
+Epoch 10/100, Loss: 1.2871
+Epoch 20/100, Loss: 0.8852
+Epoch 30/100, Loss: 0.7515
+Epoch 40/100, Loss: 0.5944
+Epoch 50/100, Loss: 0.6096
+Epoch 60/100, Loss: 0.5702
+Epoch 70/100, Loss: 0.5134
+Epoch 80/100, Loss: 0.4872
+Epoch 90/100, Loss: 0.4728
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.09748556464910507
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.6510535478591919, 0.9225513935089111, 0.4368913173675537
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+390
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 390
+Batch size: 32
+Batches per epoch: 12
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.6462
+Epoch 10/100, Loss: 1.2344
+Epoch 20/100, Loss: 1.0105
+Epoch 30/100, Loss: 0.8591
+Epoch 40/100, Loss: 0.7857
+Epoch 50/100, Loss: 0.7488
+Epoch 60/100, Loss: 0.7024
+Epoch 70/100, Loss: 0.6860
+Epoch 80/100, Loss: 0.6418
+Epoch 90/100, Loss: 0.6097
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.1292991042137146
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.5190907716751099, 0.9384147524833679, 0.8101882934570312
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+155
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 155
+Batch size: 32
+Batches per epoch: 4
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 3.1270
+Epoch 10/100, Loss: 2.0339
+Epoch 20/100, Loss: 1.6479
+Epoch 30/100, Loss: 1.4233
+Epoch 40/100, Loss: 1.2599
+Epoch 50/100, Loss: 1.1225
+Epoch 60/100, Loss: 1.0385
+Epoch 70/100, Loss: 0.9903
+Epoch 80/100, Loss: 0.9112
+Epoch 90/100, Loss: 0.8311
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8806122448979592, Avg Reward: 0.88, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.2552298307418823
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.9800970554351807, 0.9885311722755432, 0.3167651295661926
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+358
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 358
+Batch size: 32
+Batches per epoch: 11
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.5860
+Epoch 10/100, Loss: 1.2976
+Epoch 20/100, Loss: 1.0006
+Epoch 30/100, Loss: 0.8515
+Epoch 40/100, Loss: 0.7787
+Epoch 50/100, Loss: 0.7257
+Epoch 60/100, Loss: 0.7614
+Epoch 70/100, Loss: 0.7367
+Epoch 80/100, Loss: 0.6585
+Epoch 90/100, Loss: 0.7027
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.1273898333311081
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.6965049505233765, 0.9085725545883179, 0.9351036548614502
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+53
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 53
+Batch size: 32
+Batches per epoch: 1
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.9166
+Epoch 10/100, Loss: 2.0014
+Epoch 20/100, Loss: 1.5813
+Epoch 30/100, Loss: 1.2846
+Epoch 40/100, Loss: 1.1214
+Epoch 50/100, Loss: 0.9133
+Epoch 60/100, Loss: 0.8029
+Epoch 70/100, Loss: 0.5930
+Epoch 80/100, Loss: 0.5758
+Epoch 90/100, Loss: 0.5242
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.2508925795555115
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.9411783814430237, 0.9400492906570435, 0.06520867347717285
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+336
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 336
+Batch size: 32
+Batches per epoch: 10
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.7356
+Epoch 10/100, Loss: 1.4613
+Epoch 20/100, Loss: 1.0880
+Epoch 30/100, Loss: 0.9856
+Epoch 40/100, Loss: 0.8579
+Epoch 50/100, Loss: 0.8238
+Epoch 60/100, Loss: 0.7660
+Epoch 70/100, Loss: 0.7289
+Epoch 80/100, Loss: 0.6809
+Epoch 90/100, Loss: 0.7227
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.1282256543636322
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.5459962487220764, 0.9812802672386169, 0.03402292728424072
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+257
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 257
+Batch size: 32
+Batches per epoch: 8
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.5857
+Epoch 10/100, Loss: 1.4367
+Epoch 20/100, Loss: 1.0909
+Epoch 30/100, Loss: 0.9497
+Epoch 40/100, Loss: 0.8169
+Epoch 50/100, Loss: 0.8015
+Epoch 60/100, Loss: 0.7053
+Epoch 70/100, Loss: 0.7264
+Epoch 80/100, Loss: 0.6470
+Epoch 90/100, Loss: 0.6207
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.01638253591954708
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.09920923411846161
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.944246232509613, 0.911981999874115, 0.0012360215187072754
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+207
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 207
+Batch size: 32
+Batches per epoch: 6
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.7536
+Epoch 10/100, Loss: 1.4991
+Epoch 20/100, Loss: 1.1501
+Epoch 30/100, Loss: 0.9970
+Epoch 40/100, Loss: 0.9454
+Epoch 50/100, Loss: 0.8146
+Epoch 60/100, Loss: 0.7503
+Epoch 70/100, Loss: 0.6851
+Epoch 80/100, Loss: 0.6553
+Epoch 90/100, Loss: 0.6994
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.03339221701025963
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.5935860276222229, 0.9584230184555054, 0.41771942377090454
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+413
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 413
+Batch size: 32
+Batches per epoch: 12
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.8678
+Epoch 10/100, Loss: 1.4113
+Epoch 20/100, Loss: 1.1583
+Epoch 30/100, Loss: 1.0681
+Epoch 40/100, Loss: 1.0040
+Epoch 50/100, Loss: 0.9356
+Epoch 60/100, Loss: 0.9143
+Epoch 70/100, Loss: 0.8743
+Epoch 80/100, Loss: 0.8288
+Epoch 90/100, Loss: 0.8619
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.18985560536384583
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.2711215615272522, 0.9307721853256226, 0.2038482427597046
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+303
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 303
+Batch size: 32
+Batches per epoch: 9
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.7582
+Epoch 10/100, Loss: 1.4447
+Epoch 20/100, Loss: 1.1324
+Epoch 30/100, Loss: 1.0026
+Epoch 40/100, Loss: 0.8674
+Epoch 50/100, Loss: 0.8604
+Epoch 60/100, Loss: 0.7756
+Epoch 70/100, Loss: 0.7166
+Epoch 80/100, Loss: 0.7209
+Epoch 90/100, Loss: 0.6891
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03349674120545387
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.6832956671714783, 0.9247145652770996, 0.8579357862472534
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+477
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 477
+Batch size: 32
+Batches per epoch: 14
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.6267
+Epoch 10/100, Loss: 1.1936
+Epoch 20/100, Loss: 0.9344
+Epoch 30/100, Loss: 0.7849
+Epoch 40/100, Loss: 0.6686
+Epoch 50/100, Loss: 0.6500
+Epoch 60/100, Loss: 0.6426
+Epoch 70/100, Loss: 0.6344
+Epoch 80/100, Loss: 0.5838
+Epoch 90/100, Loss: 0.5919
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.06618044525384903
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.6869555711746216, 0.9994867444038391, 0.17565155029296875
+Running experiment: moderate_task_lava_gap
+                                           |   mmm   |
+Collecting data for contrastive learning...|  (@_@)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+404
+                                           |   mmm   |
+Training contrastive model...              |  (O.O)  |
+                                           | <( : )> |
+                                           |   / \   |
+
+Dataset size: 404
+Batch size: 32
+Batches per epoch: 12
+Queries device: cpu, Keys device: cpu
+Model device: cpu
+Epoch 0/100, Loss: 2.6736
+Epoch 10/100, Loss: 1.2102
+Epoch 20/100, Loss: 0.9132
+Epoch 30/100, Loss: 0.8604
+Epoch 40/100, Loss: 0.7380
+Epoch 50/100, Loss: 0.6893
+Epoch 60/100, Loss: 0.5929
+Epoch 70/100, Loss: 0.6283
+Epoch 80/100, Loss: 0.5252
+Epoch 90/100, Loss: 0.5466
+                                           |  Bank  |
+Building memory bank...                    |        |
+                                           |   __   |
+                                           |   ||   |
+
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.1278710663318634
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+32
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.03838970884680748
+Episode 50: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.1282290518283844
+Episode 100: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.09626971930265427
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.03232710435986519, 0.981476902961731, 0.37341737747192383
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.9219387755102041, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.035643696784973145
+Episode 100: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.03243432939052582
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.42722323536872864, 0.9247145652770996, 0.8579357862472534
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.6831632653061224, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.12698590755462646
+Episode 50: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.06657760590314865
+Episode 100: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.2831863462924957
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.48747023940086365, 0.9812802672386169, 0.03402292728424072
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.22002935409545898
+Episode 50: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.09518767148256302
+Episode 100: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.160963237285614
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.40138405561447144, 0.9225513935089111, 0.4368913173675537
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.13296350836753845
+Episode 50: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.034963976591825485
+Episode 100: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.28537410497665405
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1356109380722046, 0.9717731475830078, 0.6816085577011108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.09852202236652374
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.16438989341259003
+Episode 100: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.10010422021150589
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.33598363399505615, 0.9302332401275635, 0.800011396408081
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.13291862607002258
+Episode 50: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.0043422202579677105
+Episode 100: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.005229156464338303
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.14540481567382812, 0.9184530973434448, 0.793160617351532
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8025510204081633, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.15866713225841522
+Episode 50: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.12905967235565186
+Episode 100: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.12538839876651764
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.11588724702596664, 0.907020092010498, 0.7231091856956482
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = -1
+Episode 50: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.00482746260240674
+Episode 100: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.0017566496971994638
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1023917943239212, 0.9846543073654175, 0.24170821905136108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.002591982251033187
+Episode 50: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.12898512184619904
+Episode 100: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.25218525528907776
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.39181575179100037, 0.9085725545883179, 0.9351036548614502
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.9127551020408163, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.19258323311805725
+Episode 50: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.22216257452964783
+Episode 100: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.032321155071258545
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.10947372019290924, 0.9692577123641968, 0.6340786814689636
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.09738454222679138
+Episode 50: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.006217818707227707
+Episode 100: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.004733646288514137
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.30719810724258423, 0.9231778383255005, 0.08847743272781372
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.7795918367346939, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.10053016245365143
+Episode 50: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.1891007423400879
+Episode 100: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.06370779126882553
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.4695405960083008, 0.9298920035362244, 0.2038237452507019
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.7244897959183674, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.005674956366419792
+Episode 50: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.1278201788663864
+Episode 100: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.03548410162329674
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.4600733518600464, 0.9584230184555054, 0.41771942377090454
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06642770022153854
+Episode 50: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.12555605173110962
+Episode 100: Total Reward: 0.8255102040816327, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.1603783220052719
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.5432539582252502, 0.911981999874115, 0.0012360215187072754
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.09205186367034912
+Episode 50: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.22180308401584625
+Episode 100: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.15982365608215332
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+16
+Running experiment: moderate_task_lava_gap, 0.40138405561447144, 0.9225513935089111, 0.4368913173675537
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.19066283106803894
+Episode 50: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.25257816910743713
+Episode 100: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.1591634452342987
+Episode 150: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.006851834245026112
+Episode 200: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.03566208481788635
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.14540481567382812, 0.9184530973434448, 0.793160617351532
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8806122448979592, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.0652046725153923
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.03854347765445709
+Episode 100: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.034443214535713196
+Episode 150: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06519035995006561
+Episode 200: Total Reward: 0.5591836734693878, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.03407872095704079
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.926530612244898, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.07702235877513885
+Episode 50: Total Reward: 0.8346938775510204, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.25088924169540405
+Episode 100: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.18350264430046082
+Episode 150: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.1597827672958374
+Episode 200: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.06555428355932236
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1356109380722046, 0.9717731475830078, 0.6816085577011108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.16326989233493805
+Episode 50: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.06970397382974625
+Episode 100: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.1617806851863861
+Episode 150: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.15997786819934845
+Episode 200: Total Reward: 0.9448979591836735, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.15706846117973328
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.39181575179100037, 0.9085725545883179, 0.9351036548614502
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.12879158556461334
+Episode 50: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.03685177117586136
+Episode 100: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.18826088309288025
+Episode 150: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.2211897373199463
+Episode 200: Total Reward: 0.6280612244897958, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06620129197835922
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.5432539582252502, 0.911981999874115, 0.0012360215187072754
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8989795918367347, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.19150717556476593
+Episode 50: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.12706851959228516
+Episode 100: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.19032268226146698
+Episode 150: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.19047994911670685
+Episode 200: Total Reward: 0.6602040816326531, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.0969708114862442
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.48747023940086365, 0.9812802672386169, 0.03402292728424072
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.06296785175800323
+Episode 50: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.09729617089033127
+Episode 100: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.12841251492500305
+Episode 150: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.192088320851326
+Episode 200: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.3807593882083893
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1023917943239212, 0.9846543073654175, 0.24170821905136108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8025510204081633, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.19112882018089294
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.25192296504974365
+Episode 100: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.10042327642440796
+Episode 150: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.06327968090772629
+Episode 200: Total Reward: 0.9403061224489796, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.1295308917760849
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+8
+Running experiment: moderate_task_lava_gap, 0.5432539582252502, 0.911981999874115, 0.0012360215187072754
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.2809380292892456
+Episode 50: Total Reward: 0, Avg Reward: 0.20, Exploration Efficiency: 0.00,Last loss = 0.312258780002594
+Episode 100: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.1588466912508011
+Episode 150: Total Reward: 0.9219387755102041, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.19135470688343048
+Episode 200: Total Reward: 0.9357142857142857, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.09720312803983688
+Episode 250: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.03346334025263786
+Episode 300: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.006820854265242815
+Episode 350: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.2543869614601135
+Episode 400: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.06510299444198608
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1023917943239212, 0.9846543073654175, 0.24170821905136108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8852040816326531, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.13039419054985046
+Episode 50: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.16094063222408295
+Episode 100: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.2521160840988159
+Episode 150: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.15875712037086487
+Episode 200: Total Reward: 0.6372448979591836, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.09502704441547394
+Episode 250: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.1306886225938797
+Episode 300: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.12978790700435638
+Episode 350: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.06501128524541855
+Episode 400: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.09413503110408783
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.48747023940086365, 0.9812802672386169, 0.03402292728424072
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.19171182811260223
+Episode 50: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.03349682316184044
+Episode 100: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.19218198955059052
+Episode 150: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.19215677678585052
+Episode 200: Total Reward: 0.9173469387755102, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.1307891607284546
+Episode 250: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.281061589717865
+Episode 300: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.13111355900764465
+Episode 350: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.22326306998729706
+Episode 400: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.09821023792028427
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.7061224489795919, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.07004714012145996
+Episode 50: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.06712702661752701
+Episode 100: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.0970354974269867
+Episode 150: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.22024649381637573
+Episode 200: Total Reward: 0.3938775510204082, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.09841606020927429
+Episode 250: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.06757713109254837
+Episode 300: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.06364565342664719
+Episode 350: Total Reward: 0.6969387755102041, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.12960734963417053
+Episode 400: Total Reward: 0.7244897959183674, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.19127608835697174
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+4
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.7704081632653061, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.2845490276813507
+Episode 50: Total Reward: 0.9448979591836735, Avg Reward: 0.20, Exploration Efficiency: 0.00,Last loss = 0.15931269526481628
+Episode 100: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.31767773628234863
+Episode 150: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.2179555594921112
+Episode 200: Total Reward: 0.6326530612244898, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.16231243312358856
+Episode 250: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.09947334229946136
+Episode 300: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.1295761913061142
+Episode 350: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.1254824697971344
+Episode 400: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.03497720882296562
+Episode 450: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.2504644989967346
+Episode 500: Total Reward: 0.9403061224489796, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.22057174146175385
+Episode 550: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.03556103631854057
+Episode 600: Total Reward: 0.9448979591836735, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.22021356225013733
+Episode 650: Total Reward: 0.9586734693877551, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.09559112042188644
+Episode 700: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.16306209564208984
+Episode 750: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.005612828303128481
+Episode 800: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.1901143491268158
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+Running experiment: moderate_task_lava_gap, 0.1023917943239212, 0.9846543073654175, 0.24170821905136108
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.09562183171510696
+Episode 50: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.042882442474365234
+Episode 100: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.09558326750993729
+Episode 150: Total Reward: 0.9586734693877551, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.31772810220718384
+Episode 200: Total Reward: 0.5729591836734693, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.10138730704784393
+Episode 250: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.06909346580505371
+Episode 300: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06644770503044128
+Episode 350: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.16033291816711426
+Episode 400: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06530517339706421
+Episode 450: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.1892681121826172
+Episode 500: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.2525019645690918
+Episode 550: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.10045814514160156
+Episode 600: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.033990200608968735
+Episode 650: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.03782869502902031
+Episode 700: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.0633150115609169
+Episode 750: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.031627070158720016
+Episode 800: Total Reward: 0.8576530612244898, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.15908069908618927
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+2
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.8714285714285714, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.03594692796468735
+Episode 50: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.09463939070701599
+Episode 100: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.22316524386405945
+Episode 150: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.31253379583358765
+Episode 200: Total Reward: 0.6418367346938776, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.192958265542984
+Episode 250: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.03718636929988861
+Episode 300: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.09303756058216095
+Episode 350: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.15626640617847443
+Episode 400: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.22200605273246765
+Episode 450: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.15882907807826996
+Episode 500: Total Reward: 0.9586734693877551, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.18786880373954773
+Episode 550: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.18726682662963867
+Episode 600: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.19045525789260864
+Episode 650: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.09671813249588013
+Episode 700: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.09434293955564499
+Episode 750: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.2819332182407379
+Episode 800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.12727274000644684
+Episode 850: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.28302550315856934
+Episode 900: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.1872224360704422
+Episode 950: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.032693713903427124
+Episode 1000: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.2503640651702881
+Episode 1050: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.1530430018901825
+Episode 1100: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.34408628940582275
+Episode 1150: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.28445571660995483
+Episode 1200: Total Reward: 0, Avg Reward: 0.23, Exploration Efficiency: 0.00,Last loss = 0.12746557593345642
+Episode 1250: Total Reward: 0, Avg Reward: 0.20, Exploration Efficiency: 0.00,Last loss = 0.09508778154850006
+Episode 1300: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.0335688479244709
+Episode 1350: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.3429829478263855
+Episode 1400: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.1874544620513916
+Episode 1450: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.0390082411468029
+Episode 1500: Total Reward: 0.9586734693877551, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.0652908980846405
+Episode 1550: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.4658442437648773
+Episode 1600: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.2821391820907593
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+1
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.9494897959183674, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.1899685263633728
+Episode 50: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.035612404346466064
+Episode 100: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.1883893460035324
+Episode 150: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.3447871506214142
+Episode 200: Total Reward: 0.9586734693877551, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.15876400470733643
+Episode 250: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.19320528209209442
+Episode 300: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.15750297904014587
+Episode 350: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.13066549599170685
+Episode 400: Total Reward: 0, Avg Reward: 0.21, Exploration Efficiency: 0.00,Last loss = 0.22162792086601257
+Episode 450: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.18912020325660706
+Episode 500: Total Reward: 0.9586734693877551, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.27982598543167114
+Episode 550: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.034485701471567154
+Episode 600: Total Reward: 0.9540816326530612, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.15811410546302795
+Episode 650: Total Reward: 0.9403061224489796, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.3127965033054352
+Episode 700: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.12781918048858643
+Episode 750: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.15429405868053436
+Episode 800: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.003562968224287033
+Episode 850: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.03841038793325424
+Episode 900: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.13049550354480743
+Episode 950: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.0645647943019867
+Episode 1000: Total Reward: 0.9586734693877551, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.21622812747955322
+Episode 1050: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.30915483832359314
+Episode 1100: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.4009208679199219
+Episode 1150: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.06389044225215912
+Episode 1200: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.22158698737621307
+Episode 1250: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.313140332698822
+Episode 1300: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.2196727991104126
+Episode 1350: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.0678214281797409
+Episode 1400: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.003573424182832241
+Episode 1450: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.25286585092544556
+Episode 1500: Total Reward: 0.9403061224489796, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.34291601181030273
+Episode 1550: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.0964188426733017
+Episode 1600: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.09651583433151245
+Episode 1650: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.25163859128952026
+Episode 1700: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.34479057788848877
+Episode 1750: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.015384943224489689
+Episode 1800: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.253732830286026
+Episode 1850: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.03397861123085022
+Episode 1900: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.03236696869134903
+Episode 1950: Total Reward: 0.3341836734693877, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.12891051173210144
+Episode 2000: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.25155019760131836
+Episode 2050: Total Reward: 0.8668367346938776, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.3696538805961609
+Episode 2100: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.03596966341137886
+Episode 2150: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.2208876758813858
+Episode 2200: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.24641664326190948
+Episode 2250: Total Reward: 0.8209183673469388, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.24746297299861908
+Episode 2300: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.0797344222664833
+Episode 2350: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.15811105072498322
+Episode 2400: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.25222712755203247
+Episode 2450: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.43003255128860474
+Episode 2500: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.011346040293574333
+Episode 2550: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.24659858644008636
+Episode 2600: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.2500336766242981
+Episode 2650: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.03195204585790634
+Episode 2700: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.21874096989631653
+Episode 2750: Total Reward: 0.8346938775510204, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.2795426845550537
+Episode 2800: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.28103744983673096
+Episode 2850: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.06313420087099075
+Episode 2900: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06777022033929825
+Episode 2950: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.14953948557376862
+Episode 3000: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.157729372382164
+Episode 3050: Total Reward: 0.9494897959183674, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.03514363616704941
+Episode 3100: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.3343612253665924
+Episode 3150: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.27282777428627014
+Episode 3200: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.032838862389326096
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+1
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.9494897959183674, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.2804586887359619
+Episode 50: Total Reward: 0, Avg Reward: 0.22, Exploration Efficiency: 0.00,Last loss = 0.005386624485254288
+Episode 100: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.09555744379758835
+Episode 150: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.34377947449684143
+Episode 200: Total Reward: 0.9586734693877551, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.13016623258590698
+Episode 250: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.03239170461893082
+Episode 300: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.033699847757816315
+Episode 350: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.09709206223487854
+Episode 400: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.1288469433784485
+Episode 450: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.2510250508785248
+Episode 500: Total Reward: 0.889795918367347, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.09508277475833893
+Episode 550: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.09575710445642471
+Episode 600: Total Reward: 0.9448979591836735, Avg Reward: 0.24, Exploration Efficiency: 0.00,Last loss = 0.06577428430318832
+Episode 650: Total Reward: 0, Avg Reward: 0.20, Exploration Efficiency: 0.00,Last loss = 0.03258737921714783
+Episode 700: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.09533798694610596
+Episode 750: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.21784120798110962
+Episode 800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.03600992634892464
+Episode 850: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.03528003767132759
+Episode 900: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.1273934543132782
+Episode 950: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.15946775674819946
+Episode 1000: Total Reward: 0.9540816326530612, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.4664550721645355
+Episode 1050: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.2516378164291382
+Episode 1100: Total Reward: 0.8163265306122449, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.2205401062965393
+Episode 1150: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.21956205368041992
+Episode 1200: Total Reward: 0, Avg Reward: 0.23, Exploration Efficiency: 0.00,Last loss = 0.22233451902866364
+Episode 1250: Total Reward: 0, Avg Reward: 0.22, Exploration Efficiency: 0.00,Last loss = 0.28339582681655884
+Episode 1300: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.15587949752807617
+Episode 1350: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.03236113116145134
+Episode 1400: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.1889081597328186
+Episode 1450: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.15413585305213928
+Episode 1500: Total Reward: 0.8209183673469388, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.18707546591758728
+Episode 1550: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.34232860803604126
+Episode 1600: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.279877632856369
+Episode 1650: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.3131343424320221
+Episode 1700: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.27787265181541443
+Episode 1750: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.033775001764297485
+Episode 1800: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.4018625020980835
+Episode 1850: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.12921756505966187
+Episode 1900: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.24792225658893585
+Episode 1950: Total Reward: 0.7290816326530611, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.18689760565757751
+Episode 2000: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.03489102050662041
+Episode 2050: Total Reward: 0.9403061224489796, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.25293824076652527
+Episode 2100: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.15598630905151367
+Episode 2150: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.21707472205162048
+Episode 2200: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.22009873390197754
+Episode 2250: Total Reward: 0.6693877551020408, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.18811342120170593
+Episode 2300: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.037470608949661255
+Episode 2350: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.2735885679721832
+Episode 2400: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.3090721368789673
+Episode 2450: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.21723760664463043
+Episode 2500: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.12852908670902252
+Episode 2550: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.15719199180603027
+Episode 2600: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.28659582138061523
+Episode 2650: Total Reward: 0.9403061224489796, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.36789292097091675
+Episode 2700: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.12747105956077576
+Episode 2750: Total Reward: 0.9035714285714286, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.15302804112434387
+Episode 2800: Total Reward: 0.9494897959183674, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.4918585419654846
+Episode 2850: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.10903382301330566
+Episode 2900: Total Reward: 0.9219387755102041, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.24533489346504211
+Episode 2950: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.1838809996843338
+Episode 3000: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.3122676610946655
+Episode 3050: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.09536132961511612
+Episode 3100: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.0371682234108448
+Episode 3150: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.093966044485569
+Episode 3200: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.0649564191699028
+Episode 3250: Total Reward: 0, Avg Reward: 0.02, Exploration Efficiency: 0.00,Last loss = 0.03399340808391571
+Episode 3300: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.03419296443462372
+Episode 3350: Total Reward: 0, Avg Reward: 0.02, Exploration Efficiency: 0.00,Last loss = 0.12063844501972198
+Episode 3400: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.03276500850915909
+Episode 3450: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.1628672480583191
+Episode 3500: Total Reward: 0.9586734693877551, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.15830634534358978
+Episode 3550: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.035755839198827744
+Episode 3600: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.09306540340185165
+Episode 3650: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.033129166811704636
+Episode 3700: Total Reward: 0.7244897959183674, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.29712343215942383
+Episode 3750: Total Reward: 0.9357142857142857, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.3107016682624817
+Episode 3800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.031054291874170303
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3600: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.09306540340185165
+Episode 3650: Total Reward: 0, Avg Reward: 0.04, Exploration Efficiency: 0.00,Last loss = 0.033129166811704636
+Episode 3700: Total Reward: 0.7244897959183674, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.29712343215942383
+Episode 3750: Total Reward: 0.9357142857142857, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.3107016682624817
+Episode 3800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.031054291874170303
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3700: Total Reward: 0.7244897959183674, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.29712343215942383
+Episode 3750: Total Reward: 0.9357142857142857, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.3107016682624817
+Episode 3800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.031054291874170303
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3750: Total Reward: 0.9357142857142857, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.3107016682624817
+Episode 3800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.031054291874170303
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3800: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.031054291874170303
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3850: Total Reward: 0, Avg Reward: 0.01, Exploration Efficiency: 0.00,Last loss = 0.03978320583701134
+Episode 3900: Total Reward: 0, Avg Reward: 0.02, Exploration Efficiency: 0.00,Last loss = 0.1393316686153412
+Episode 3950: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.2428273856639862
+Episode 4000: Total Reward: 0.9219387755102041, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.31929123401641846
+Episode 4050: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.14714431762695312
+Episode 4100: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.10585203021764755
+Episode 4150: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.036329735070466995
+Episode 4200: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.03382529690861702
+Episode 4250: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.003616711590439081
+Episode 4300: Total Reward: 0.8852040816326531, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.2855970561504364
+Episode 4350: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.2607385516166687
+Episode 4400: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.13052526116371155
+Episode 4450: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.045653246343135834
+Episode 4500: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.1079908087849617
+Episode 4550: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.1407119780778885
+Episode 4600: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.0034972643479704857
+Episode 4650: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.10761027038097382
+Episode 4700: Total Reward: 0, Avg Reward: 0.00, Exploration Efficiency: 0.00,Last loss = 0.06737358123064041
+Episode 4750: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.006237138994038105
+Episode 4800: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.0010903655784204602
+Episode 4850: Total Reward: 0.6510204081632653, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.06743551045656204
+Episode 4900: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.03130478784441948
+Episode 4950: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.03966493904590607
+Episode 5000: Total Reward: 0.7107142857142856, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.0962166041135788
+Episode 5050: Total Reward: 0.9311224489795918, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.033490825444459915
+Episode 5100: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.0026123146526515484
+Episode 5150: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.008577282540500164
+Episode 5200: Total Reward: 0, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.09369037300348282
+Episode 5250: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.03330206498503685
+Episode 5300: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.22669652104377747
+Episode 5350: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.030927740037441254
+Episode 5400: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.16380776464939117
+Episode 5450: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.057270973920822144
+Episode 5500: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.08776389807462692
+Episode 5550: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.06810395419597626
+Episode 5600: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.034605443477630615
+Episode 5650: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.033796120434999466
+Episode 5700: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.11895930022001266
+Episode 5750: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.0010906815296038985
+Episode 5800: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.0016512684524059296
+Episode 5850: Total Reward: 0, Avg Reward: 0.03, Exploration Efficiency: 0.00,Last loss = 0.03356192260980606
+Episode 5900: Total Reward: 0, Avg Reward: 0.02, Exploration Efficiency: 0.00,Last loss = 0.01089742872864008
+Episode 5950: Total Reward: 0.701530612244898, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.05294186621904373
+Episode 6000: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.19938282668590546
+Episode 6050: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.033535148948431015
+Episode 6100: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.07179266214370728
+Episode 6150: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.133058100938797
+Episode 6200: Total Reward: 0.6051020408163266, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.10639375448226929
+Episode 6250: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.06285245716571808
+Episode 6300: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.08028843253850937
+Episode 6350: Total Reward: 0, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.13972151279449463
+Episode 6400: Total Reward: 0, Avg Reward: 0.05, Exploration Efficiency: 0.00,Last loss = 0.0819302499294281
+Experiment moderate_task_lava_gap completed. Results saved to results/moderate_task_lava_gap
+1
+Running experiment: moderate_task_lava_gap, 0.24633914232254028, 0.984932005405426, 0.03171950578689575
+Training RL agent with intrinsic rewards...
+Episode 0: Total Reward: 0.6051020408163266, Avg Reward: 0.06, Exploration Efficiency: 0.00,Last loss = 0.1272227019071579
+Episode 50: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.28403493762016296
+Episode 100: Total Reward: 0, Avg Reward: 0.21, Exploration Efficiency: 0.00,Last loss = 0.3440762162208557
+Episode 150: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.25384455919265747
+Episode 200: Total Reward: 0.9219387755102041, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.1585453301668167
+Episode 250: Total Reward: 0, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.037148818373680115
+Episode 300: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.1884908676147461
+Episode 350: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.1877821981906891
+Episode 400: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.1259044110774994
+Episode 450: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.1557517945766449
+Episode 500: Total Reward: 0.9586734693877551, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.09345175325870514
+Episode 550: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.21731559932231903
+Episode 600: Total Reward: 0.9586734693877551, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.09304826706647873
+Episode 650: Total Reward: 0.9035714285714286, Avg Reward: 0.14, Exploration Efficiency: 0.00,Last loss = 0.06364332139492035
+Episode 700: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.1580067127943039
+Episode 750: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.010806156322360039
+Episode 800: Total Reward: 0, Avg Reward: 0.11, Exploration Efficiency: 0.00,Last loss = 0.18919479846954346
+Episode 850: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.12694908678531647
+Episode 900: Total Reward: 0, Avg Reward: 0.17, Exploration Efficiency: 0.00,Last loss = 0.15986301004886627
+Episode 950: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.18666106462478638
+Episode 1000: Total Reward: 0.2147959183673469, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.3142528235912323
+Episode 1050: Total Reward: 0, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.43242311477661133
+Episode 1100: Total Reward: 0.9586734693877551, Avg Reward: 0.19, Exploration Efficiency: 0.00,Last loss = 0.24802656471729279
+Episode 1150: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.36859580874443054
+Episode 1200: Total Reward: 0, Avg Reward: 0.22, Exploration Efficiency: 0.00,Last loss = 0.034916117787361145
+Episode 1250: Total Reward: 0, Avg Reward: 0.18, Exploration Efficiency: 0.00,Last loss = 0.15640167891979218
+Episode 1300: Total Reward: 0, Avg Reward: 0.08, Exploration Efficiency: 0.00,Last loss = 0.002648062538355589
+Episode 1350: Total Reward: 0, Avg Reward: 0.09, Exploration Efficiency: 0.00,Last loss = 0.0959668904542923
+Episode 1400: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.2450590580701828
+Episode 1450: Total Reward: 0, Avg Reward: 0.12, Exploration Efficiency: 0.00,Last loss = 0.15730097889900208
+Episode 1500: Total Reward: 0.8943877551020408, Avg Reward: 0.15, Exploration Efficiency: 0.00,Last loss = 0.03612479194998741
+Episode 1550: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.402272492647171
+Episode 1600: Total Reward: 0, Avg Reward: 0.07, Exploration Efficiency: 0.00,Last loss = 0.19085471332073212
+Episode 1650: Total Reward: 0, Avg Reward: 0.10, Exploration Efficiency: 0.00,Last loss = 0.09742046147584915
+Episode 1700: Total Reward: 0, Avg Reward: 0.13, Exploration Efficiency: 0.00,Last loss = 0.19029848277568817
+Episode 1750: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.15640127658843994
+Episode 1800: Total Reward: 0, Avg Reward: 0.16, Exploration Efficiency: 0.00,Last loss = 0.28095054626464844

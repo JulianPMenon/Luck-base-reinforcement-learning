@@ -1,0 +1,19 @@
+{
+  "config": {
+    "name": "easy_task_rnd",
+    "env_name": "MiniGrid-Empty-8x8-v0",
+    "rl_episodes": 16,
+    "max_steps_per_episode": 300,
+    "feature_dim": 64,
+    "batch_size": 16,
+    "learning_rate": 1.0864433419941762e-05,
+    "actionmap": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 5
+    }
+  },
+  "avg_reward": 0.1848429485715098
+}

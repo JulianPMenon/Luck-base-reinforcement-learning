@@ -6,12 +6,12 @@ import torchvision.transforms.functional as TF
 
 class DataCollector:
     
-    def __init__(self, env, max_episodes=1000):
-        self.env = env
+    def __init__(self, max_episodes=1000, max_steps_per_episode = 200):
         self.max_episodes = max_episodes
+        self.max_steps_per_episode = max_steps_per_episode
 
         
-    def collect_data(self) -> List[torch.Tensor]:
+    def collect_data(self, env) -> List[torch.Tensor]:
         """
         Collects data from the environment by running a series of episodes.
         
@@ -20,21 +20,21 @@ class DataCollector:
         """
         data = []
         for episode in range(self.max_episodes):
-            obs = self.env.reset()
+            obs = env.reset()
             #data.append(torch.tensor(obs, dtype=torch.float32))
             data.append(obs.detach().clone())
             done = False
-            
-            while not done:
-                action = self.env.action_space.sample()
-                obs, reward, terminated, truncated, info = self.env.step(action)
+            steps = 0
+            while not done and steps < self.max_steps_per_episode:
+                action = env.action_space.sample()
+                obs, reward, terminated, truncated, info = env.step(action)
                 
                 data.append(obs.detach().clone())
                 #data.append(torch.tensor(obs, dtype=torch.float32))
                 
                 done = terminated or truncated
-                if len(data) >= self.max_episodes:
-                    break
+                steps += 1
+        print(len(data))
         return data
     
     def create_contrastive_pairs(self, data: List[torch.Tensor], aug = None, mode: str = "NOISE") -> Tuple[torch.Tensor, torch.Tensor]:

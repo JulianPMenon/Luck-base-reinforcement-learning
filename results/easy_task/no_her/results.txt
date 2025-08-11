@@ -1,0 +1,10 @@
+seed: 0 | epoch: 150 | epsilon: 0.47857693137342205 | avg_reward: 0.47651953124999996 | len(memory_bank): 7995
+seed: 1 | epoch: 250 | epsilon: 0.3191360687279645 | avg_reward: 0.7892031250000001 | len(memory_bank): 7995
+seed: 2 | epoch: 250 | epsilon: 0.3191360687279645 | avg_reward: 0.4857421874999999 | len(memory_bank): 7995
+seed: 3 | epoch: 150 | epsilon: 0.47857693137342205 | avg_reward: 0.4296875 | len(memory_bank): 7995
+seed: 4 | epoch: 50 | epsilon: 0.7176746901586798 | avg_reward: 0.22595741421568627 | len(memory_bank): 7995
+seed: 5 | epoch: 50 | epsilon: 0.7176746901586798 | avg_reward: 0.16352634803921565 | len(memory_bank): 7745
+seed: 6 | epoch: 400 | epsilon: 0.17378491915468852 | avg_reward: 0.40701171875 | len(memory_bank): 7995
+seed: 7 | epoch: 50 | epsilon: 0.7176746901586798 | avg_reward: 0.2138020833333333 | len(memory_bank): 6785
+seed: 8 | epoch: 50 | epsilon: 0.7176746901586798 | avg_reward: 0.26204044117647063 | len(memory_bank): 7995
+seed: 9 | epoch: 50 | epsilon: 0.7176746901586798 | avg_reward: 0.405032169117647 | len(memory_bank): 7995
